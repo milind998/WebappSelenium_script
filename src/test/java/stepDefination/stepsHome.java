@@ -31,7 +31,8 @@ public class stepsHome {
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Milind Manoharrao\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver.exe");
+		"C:\\Users\\Milind Manoharrao\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 version-0.0.128\\chromedriver-win64\\chromedriver.exe");
+		
 
 				//"C:\\Users\\Milind Manoharrao\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -54,7 +55,7 @@ public class stepsHome {
 
 	@Then("Admin Home page")
 	public void Page_Title_should_be_Home() {
-		String expResult = "Home";
+		String expResult = "Dashboard";
 		String actResult = lp.homePage();
 		Assert.assertEquals(actResult, expResult);
 	}
@@ -71,8 +72,8 @@ public class stepsHome {
 
 	@Then("check dashboard button text")
 	public void check_dashboard_button_text() {
-		String[] elements = { "Home", "Super Admin", "SKU", "Users", "Orders","Postpaid", "Transactions",
-				"WFS Details", "Can Swap", "Reports", "Marketing","Product Grouping", "Settings" };
+		String[] elements = { "Dashboard", "Super Admin", "SKU", "Users", "Orders","Postpaid", "Transactions",
+				"WFS Details", "Product Grouping","Can Swap", "Reports", "Marketing", "Settings" };
 		for (int i = 1; i <= 12; i++) {
 			String actResult = lp.dashbuttons(i).getText();
 			System.out.println(actResult);
@@ -98,7 +99,7 @@ public class stepsHome {
 	@Then("Check Login text")
 	public void Check_Login_text() {
 		String actResult = lp.afterLogoutLogin();
-		String expResult = "Logi";
+		String expResult = "Login";
 		// System.out.println(expResult +" after logout check text");
 		Assert.assertEquals(actResult, expResult);
 	}
@@ -106,15 +107,15 @@ public class stepsHome {
 	@Before("@wait")
 	public void doingWait() {
 		try {
-			// System.out.println("Waiting for 18 sec..");
-			Thread.sleep(1800);
+			 System.out.println("Waiting for 2 sec..");
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}
 	}
 
 	@AfterStep
-	public void takeScraenshotOnFailure(Scenario scenario) {
+	public void takeScreenshotOnFailure(Scenario scenario) {
 
 		if (scenario.isFailed()) {
 

@@ -48,7 +48,7 @@ public class Home {
 		btnLogin.click();
 	}
 	
-	@FindBy (xpath = "(//*[text()=\"Home\"])[1]")
+	@FindBy (xpath = "(//*[text()='Dashboard'])[1]")
 	@CacheLookup
 	WebElement txtHome;
 	public String homePage () {
