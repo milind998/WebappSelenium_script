@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.testng.Assert;
 //import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.pages.Home;
 
@@ -31,16 +32,51 @@ public class stepsHome {
 
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
-		System.setProperty("webdriver.chrome.driver",
-		"C:\\Users\\Milind Manoharrao\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 (version-0.0.130)\\chromedriver-win64\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver",
+//		"C:\\Users\\Milind Manoharrao\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 (version-0.0.130)\\chromedriver-win64\\chromedriver.exe");
+//		
+//
+//				//"C:\\Users\\Milind Manoharrao\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+//		driver = new ChromeDriver();
+//		lp = new Home(driver);
+//		driver.navigate().to("https://loginstage.bookwater.com/authenticate");
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		driver.manage().window().maximize();
 		
-
-				//"C:\\Users\\Milind Manoharrao\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
-		driver = new ChromeDriver();
-		lp = new Home(driver);
-		driver.navigate().to("https://loginstage.bookwater.com/authenticate");
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+		
+		
+String userDirectory = System.getProperty("user.home");
+	    
+	    // Detect OS to set the correct ChromeDriver path
+	    String chromeDriverPath;
+	    System.out.println(System.getProperty("os.name").toLowerCase());
+	    if (System.getProperty("os.name").toLowerCase().contains("win")) {
+	        // Windows path
+	        chromeDriverPath = userDirectory + "\\OneDrive - Bookwater Tech Private Limited\\Chromedriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe";
+	    } else {
+	        // Linux path (ensure the correct path where chromedriver is located)
+	        chromeDriverPath = "/usr/bin/chromedriver";
+	    }
+	    
+	    System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+ 
+	    // Set up ChromeOptions
+	    ChromeOptions options = new ChromeOptions();
+	    if (!System.getProperty("os.name").toLowerCase().contains("win")) {
+	        // Add headless mode for Linux
+	        options.addArguments("--headless");  // Run in headless mode
+	        options.addArguments("--no-sandbox");  // Required for running Chrome in containers
+	        options.addArguments("--disable-dev-shm-usage");  // Overcome limited resource issues
+	        options.addArguments("--disable-gpu");  // Disable GPU (optional, may be needed in headless mode)
+	    }
+ 
+	    this.driver = new ChromeDriver(options);  // Pass ChromeOptions to ChromeDriver
+	    lp = new Home(driver);
+	    
+	    driver.get("https://loginstage.bookwater.com/authenticate");
+	    
+	    // Maximize current window
+	    driver.manage().window().maximize();
 	}
 
 	@When("user enters username and password")
