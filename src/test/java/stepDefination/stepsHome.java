@@ -3,6 +3,7 @@ package stepDefination;
 import java.awt.AWTException;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -10,8 +11,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+//import org.testng.Assert;
+//import org.testng.annotations.BeforeClass;
 
 import com.pages.Home;
 
@@ -31,7 +32,7 @@ public class stepsHome {
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
 		System.setProperty("webdriver.chrome.driver",
-		"C:\\Users\\Milind Manoharrao\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 version-0.0.128\\chromedriver-win64\\chromedriver.exe");
+		"C:\\Users\\Milind Manoharrao\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 (version-0.0.130)\\chromedriver-win64\\chromedriver.exe");
 		
 
 				//"C:\\Users\\Milind Manoharrao\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");

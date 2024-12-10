@@ -996,7 +996,7 @@ public class stepsSKU {
 	
 	
 	@Then("Verify crate details text")
-	public void verify_crate_details_text() {
+	public void verify_crate_details_text() throws InterruptedException {
 		String crateDetailsTextBoxes[]= {"Name:",
 			"Phone number:",
 				"Wfs Name:",

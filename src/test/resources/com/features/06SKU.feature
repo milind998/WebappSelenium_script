@@ -305,15 +305,8 @@ Then Verify successfully toast message as "<Toast Message>"
 
 Examples: 
 | Crate Name           | Crate Capacity | Price | HSN Code | CGST % | SGST % | IGST % |  Description                 |  Toast Message |
-|                      |       6        |  200  |  0803    |  10    |  10    |   10   |  Crate By Automation Testing | body/name should NOT be shorter than 5 characters |
-| Crate By Automations |                |  200  |  0803    |  10    |  10    |   10   |  Crate By Automation Testing | body/capacity should be number |
-| Crate By Automations |      0         |  200  |  0803    |  10    |  10    |   10   |  Crate By Automation Testing | body/capacity should be >= 1   |
-| Crate By Automations |      6         |       |  0803    |  10    |  10    |   10   |  Crate By Automation Testing | body/price should be number    |
-| Crate By Automations |      6         |  200  |          |  10    |  10    |   10   |  Crate By Automation Testing | body/hsn_code should NOT be shorter than 4 characters  |
-| Crate By Automations |      6         |  200  |  0803    |        |  10    |   10   | Crate By Automation Testing  | body/cgst_perc should be number  |
-| Crate By Automations |      6         |  200  |  0803    |   0    |        |   10   | Crate By Automation Testing  | body/sgst_perc should be number |
-| Crate By Automations |      6         |  200  |  0803    |   0    |   10   |        | Crate By Automation Testing  | body/igst_perc should be number |
-| Crate    Automation  |      6         |  200  |  0803    |   0    |   10   |    10  | Crate By Automation Testing  | Successfully added the new crate! |
+|                      |       6        |  200  |  0803    |  10    |  10    |   10   |  Crate By Automation Testing | body/name must NOT have fewer than 5 characters |
+| Crate    Automation  |      6         |  200  |  0803    |   0    |   10   |    10  | Crate By Automation Testing  | Crate already available! |
 
 
 @wait

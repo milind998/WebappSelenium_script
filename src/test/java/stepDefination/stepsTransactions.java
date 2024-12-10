@@ -1,7 +1,7 @@
 package stepDefination;
 
 import static org.junit.Assert.assertNotNull;
-import static org.testng.Assert.fail;
+//import static org.testng.Assert.fail;
 
 import java.util.ArrayList;
 import java.util.Collections;

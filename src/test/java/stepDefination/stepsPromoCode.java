@@ -1,6 +1,6 @@
 package stepDefination;
 
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;

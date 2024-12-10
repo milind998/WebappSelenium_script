@@ -341,7 +341,7 @@ public class mainsettingsPage extends Home {
         }
     }
 	
-	@FindBy (xpath = "(//*[@class='MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-1q2h7u5'])[5]")
+	@FindBy (xpath = "//*[text()='Payments']")
 	@CacheLookup
 	WebElement PaymentsButton;
 	
@@ -1164,16 +1164,16 @@ public class mainsettingsPage extends Home {
 	}
 	
 	
-	//================================================PWD CONVENIENCE FEE===================================================
+	//================================================PDW CONVENIENCE FEE===================================================
 	
-	@FindBy(xpath = "//*[text()='PWD convenience Fee']")
+	@FindBy(xpath = "//*[text()='PDW convenience Fee']")
 	@CacheLookup
-	WebElement PWDConFee;
+	WebElement PDWConFee;
 
-	public void PWDConvenienceFee() {
+	public void PDWConvenienceFee() {
 		JavascriptExecutor jse = (JavascriptExecutor) ldriver;
 		jse.executeScript("window.scrollBy(0,-250)");
-		PWDConFee.click();
+		PDWConFee.click();
 	}
 
 	public WebElement PWDConFeeTabText(int i) {

@@ -715,7 +715,7 @@ public class SKU extends SuperAdmin{
 	    }
 	    
 	    
-	    @FindBy(xpath = "(//*[@class=\"MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1o6z5ng\"])[1]")
+	    @FindBy(xpath = "(//input[@type='text' and @aria-invalid='true' and contains(@class, 'MuiOutlinedInput-input')])[1]")
 		@CacheLookup
 		WebElement CrateName;
 		public void CrateNameTextBox(String CrateNameBox) {
@@ -1194,8 +1194,9 @@ public class SKU extends SuperAdmin{
 		public WebElement EnterCrateQRCOde;
 		
 		
-		public String CheckTextOF_CrateTextboxes(int i) {
+		public String CheckTextOF_CrateTextboxes(int i) throws InterruptedException {
 			WebElement CrateTextboxes = ldriver.findElement(By.xpath("(//*[@class=\"MuiTypography-root MuiTypography-body1 css-q0ewr5\"])["+i+"]"));
+			Thread.sleep(500);
 			return CrateTextboxes.getText();
 		}
 		
