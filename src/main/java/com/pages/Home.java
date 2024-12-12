@@ -28,6 +28,7 @@ public class Home {
 	@FindBy(xpath = "//*[@id='email']")
 	@CacheLookup
 	WebElement txtEmail;
+	
 	public void setUserName() {
 		txtEmail.clear();
 		txtEmail.sendKeys("noormohamed.a@bookwater.com");
@@ -48,11 +49,12 @@ public class Home {
 		btnLogin.click();
 	}
 	
-	@FindBy (xpath = "(//*[text()='Dashboard'])[1]")
-	@CacheLookup
-	WebElement txtHome;
+	@FindBy (xpath = "//*[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-1d0b3o0\"]")
+	public WebElement txtHome;
+	
 	public String homePage () {
 		String pagename = txtHome.getText();
+		System.out.println(pagename);
 		return pagename;
 	}
 	
@@ -60,7 +62,7 @@ public class Home {
 	@CacheLookup
 	WebElement title;
 	public void homePageTitle() {
-		title.getText();
+		 title.getText();
 	}
 	
 	@FindBy (xpath = "(//*[text()='Super Admin'])[1]")

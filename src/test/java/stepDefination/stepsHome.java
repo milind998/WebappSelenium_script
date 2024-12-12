@@ -3,6 +3,7 @@ package stepDefination;
 import java.awt.AWTException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.logging.log4j.core.appender.rolling.action.Duration;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -14,6 +15,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //import org.testng.Assert;
 //import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.pages.Home;
 
@@ -42,17 +45,23 @@ public class stepsHome {
 //		driver.navigate().to("https://loginstage.bookwater.com/authenticate");
 //		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //		driver.manage().window().maximize();
+//	}
 		
 		
 		
-String userDirectory = System.getProperty("user.home");
-	    
+
+		String userDirectory = System.getProperty("user.home");
+		System.out.println(userDirectory);
+
+
 	    // Detect OS to set the correct ChromeDriver path
 	    String chromeDriverPath;
 	    System.out.println(System.getProperty("os.name").toLowerCase());
 	    if (System.getProperty("os.name").toLowerCase().contains("win")) {
 	        // Windows path
-	        chromeDriverPath = userDirectory + "\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 (version-0.0.130)\\chromedriver-win64\\chromedriver.exe";
+	       
+	  chromeDriverPath = userDirectory + "\\OneDrive - Bookwater Tech Private Limited\\Desktop\\ChromeDriver\\chromedriver-win64 (version-0.0.131)\\chromedriver-win64\\chromedriver.exe";
+	  System.out.println(chromeDriverPath);
 	    } else {
 	        // Linux path (ensure the correct path where chromedriver is located)
 	        chromeDriverPath = "/usr/bin/chromedriver";
@@ -69,15 +78,16 @@ String userDirectory = System.getProperty("user.home");
 	        options.addArguments("--disable-dev-shm-usage");  // Overcome limited resource issues
 	        options.addArguments("--disable-gpu");  // Disable GPU (optional, may be needed in headless mode)
 	    }
- 
-	    this.driver = new ChromeDriver(options);  // Pass ChromeOptions to ChromeDriver
+
+	    this.driver = new ChromeDriver(options); 
 	    lp = new Home(driver);
 	    
 	    driver.get("https://loginstage.bookwater.com/authenticate");
 	    
 	    // Maximize current window
 	    driver.manage().window().maximize();
-	}
+}
+	
 
 	@When("user enters username and password")
 	public void user_enters_username_and_password() {
@@ -91,9 +101,12 @@ String userDirectory = System.getProperty("user.home");
 	}
 
 	@Then("Admin Home page")
-	public void Page_Title_should_be_Home() {
+	public void admin_home_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	   // throw new io.cucumber.java.PendingException();
+	
+		String actResult = lp.txtHome.getText();
 		String expResult = "Dashboard";
-		String actResult = lp.homePage();
 		Assert.assertEquals(actResult, expResult);
 	}
 
@@ -111,7 +124,7 @@ String userDirectory = System.getProperty("user.home");
 	public void check_dashboard_button_text() {
 		String[] elements = { "Dashboard", "Super Admin", "SKU", "Users", "Orders","Postpaid", "Transactions",
 				"WFS Details", "Product Grouping","Can Swap", "Reports", "Marketing", "Settings" };
-		for (int i = 1; i <= 12; i++) {
+		for (int i = 1; i <= 14; i++) {
 			String actResult = lp.dashbuttons(i).getText();
 			System.out.println(actResult);
 			String expResult = elements[i - 1];
