@@ -13,7 +13,7 @@ Then Admin Home page
 
 @tag2:
 Scenario: Check dashboard button text
-Given Admin Home page 
+Given Admin Home pages 
 When check Dashboard button text is display
 Then check dashboard button text
 
