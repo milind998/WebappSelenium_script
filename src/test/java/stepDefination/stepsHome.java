@@ -129,7 +129,7 @@ public class stepsHome {
 	@Then("check dashboard button text")
 	public void check_dashboard_button_text() {
 		String[] elements = { "Dashboard", "Super Admin", "SKU", "Users", "Orders","Postpaid", "Transactions",
-				"WFS Details", "Product Grouping","Can Swap", "Reports", "Marketing", "Settings" };
+				"WFS Details", "Product Grouping","Can Swap", "Reports", "Operations", "Marketing", "Settings" };
 		for (int i = 1; i <= 14; i++) {
 			String actResult = lp.dashbuttons(i).getText();
 			System.out.println(actResult);
