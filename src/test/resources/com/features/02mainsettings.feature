@@ -37,11 +37,14 @@ When Click on update button
 Then check Toast message "<Toast Message>"
  
 Examples:
-    | Maximum discount allowed(In %)| Minimum water wallet amount | Water wallet recharge alert | Extra charges for single order | OTP Less Delivery Msg                                          |Extra charges HSN code |Extra charges CGST % |Extra charges SGST % |        Toast Message |
-    |               00              |          00                 |          00                 |          00                    |    !@$%^^^&*!@$%^&                                             |      00               |          00         |         00          |         Invalid Input |
-    |               50              |          00                 |         0                   |          10                    |     123456                                                     |      00               |         00          |          00         |       Invalid Input   |
-    |               99              |          100                |         100                 |          15                    | Opting out of OTP during the delivery process exposes you risks|   99698               |         9           |          9          | successfully updated |
+    | Maximum discount allowed(In %)| Minimum water wallet amount | Water wallet recharge alert | Extra charges for single order | OTP Less Delivery Msg                                          |Extra charges HSN code |Extra charges CGST % |Extra charges SGST % |        Toast Message           |
+    |               00              |          00                 |          00                 |          00                    |    !@$%^^^&*!@$%^&                                             |      00               |          00         |         00          |         Invalid Input          |
+    |               50              |          00                 |         0                   |          10                    |     123456                                                     |      00               |         00          |          00         |       Invalid Input            |
+    |               99              |          100                |         100                 |          15                    | Opting out of OTP during the delivery process exposes you risks|   99698               |         9           |          9          | Updates settings successfully! |
  
+ 
+
+
  
  @wait
  Scenario: Add slots tab
