@@ -326,7 +326,16 @@ public class stepsMainSetting {
 	@When("Select Date Range")
 	public void select_date_range() throws InterruptedException {
 		kk.Select_Date();
+		kk.Remove_BlockedMethod();
 	}
+	
+	
+	
+	@Given("Click on Remove Date Range Button")
+	public void click_on_remove_date_range_button() throws InterruptedException {
+	    kk.RemoveBlock_DataRange();
+	}
+	
 	
 	@Given("Select Block Booking Type")
 	public void select_block_booking_type() throws InterruptedException {

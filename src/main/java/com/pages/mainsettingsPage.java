@@ -384,7 +384,7 @@ public class mainsettingsPage extends Home {
 	        xpaths.add("//*[text()='Paysharp Search UPI']");
 	        xpaths.add("//*[text()='Virtual Bank']");
 	        xpaths.add("//*[text()='RazorPay']");
-	        xpaths.add("//*[text()='Wallet']");
+	        xpaths.add("(//*[text()='Wallet'])[2]");
 	        for (String xpath : xpaths) {
 	            try {
 	            	//Thread.sleep(1500);
@@ -421,14 +421,14 @@ public class mainsettingsPage extends Home {
 //	}
 	
 	public void Remove_BlockedMethod() throws InterruptedException {
-		 List<WebElement> Cancelled_Icons = ldriver.findElements(By.xpath("//*[@data-testid='CancelIcon']"));
+		 List<WebElement> Cancelled_Icons = ldriver.findElements(By.xpath("(//*[@data-testid='CancelIcon'])"));
 	        System.out.println("Total Cancel Icons: " + Cancelled_Icons.size());
 	        for (int i = 1; i < Cancelled_Icons.size(); i++) {
 	        	System.out.println(i);
 	            WebDriverWait wait = new WebDriverWait(ldriver, 10);
-	            WebElement Cancelled_Icon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[@data-testid=\"CancelIcon\"])[1]")));
+	            WebElement Cancelled_Icon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[@data-testid='CancelIcon'])[1]")));
 	            Cancelled_Icon.click();
-	            Thread.sleep(1000);
+	            Thread.sleep(2000);
 	}
 	}
 	
@@ -469,9 +469,20 @@ public class mainsettingsPage extends Home {
 		WebElement Click_On_EndDateRange = ldriver.findElement(By.xpath("(//*[@data-testid=\"CalendarIcon\"])[2]"));
 		Click_On_EndDateRange.click();
 		Thread.sleep(1000);
-		WebElement Select_EndDate = ldriver.findElement(By.xpath("(//*[@class=\"MuiButtonBase-root MuiPickersDay-root MuiPickersDay-dayWithMargin css-ub1r1\"])[22]"));
+		WebElement Select_EndDate = ldriver.findElement(By.xpath("(//*[@class=\"MuiButtonBase-root MuiPickersDay-root MuiPickersDay-dayWithMargin css-ub1r1\"])[9]"));
 		Select_EndDate.click();
 		
+	}
+	
+	
+	@FindBy(xpath="(//*[@data-testid='CancelIcon'])[1]")
+	@CacheLookup
+	WebElement DataRange_RemoveBlock;
+	
+	public void RemoveBlock_DataRange() throws InterruptedException {
+		
+		DataRange_RemoveBlock.click();
+		Thread.sleep(1000);
 	}
 	
 	@FindBy(xpath= "//*[text()='Booking Type']")

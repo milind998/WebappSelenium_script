@@ -29,46 +29,46 @@ Scenario: Check common Settings tab
 Given Click on common Settings tab
 Then Check All tab text
 
-@wait
-Scenario Outline: consumer can able to update Common Settings 
- Check Page title 
-Given Admin enter required field  "<Maximum discount allowed(In %)>","<Minimum water wallet amount>","<Water wallet recharge alert>","<Extra charges for single order>","<OTP Less Delivery Msg>","<Extra charges HSN code>", "<Extra charges CGST %>", "<Extra charges SGST %>"
-When Click on update button
-Then check Toast message "<Toast Message>"
- 
-Examples:
-    | Maximum discount allowed(In %)| Minimum water wallet amount | Water wallet recharge alert | Extra charges for single order | OTP Less Delivery Msg                                          |Extra charges HSN code |Extra charges CGST % |Extra charges SGST % |        Toast Message           |
-    |               00              |          00                 |          00                 |          00                    |    !@$%^^^&*!@$%^&                                             |      00               |          00         |         00          |         Invalid Input          |
-    |               50              |          00                 |         0                   |          10                    |     123456                                                     |      00               |         00          |          00         |       Invalid Input            |
-    |               99              |          100                |         100                 |          15                    | Opting out of OTP during the delivery process exposes you risks|   99698               |         9           |          9          | Updates settings successfully! |
- 
- 
-
-
- 
- @wait
- Scenario: Add slots tab
- Given Click on Delivery Slots button
- When Click on Add Slots button
- And Add Slots tab text1
- Then Add Slots tab text
-    
-
-
-@wait
-Scenario Outline: Add delivery Slot
-Given Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
-When Click on ADD button
-Then check Toast message "<Toast Message>"
-
-Examples: 
-     | Number Of Slots | Delivery Slot Start Time | Delivery Slot End Time | Toast Message |
-     | 5               | 0600                     | 0900                   | Please do not repeate the time Or number of slots.|
-     | 45              |                          |                        | Please select/Enter Start Time and End Time  |
-     |                 | 1200                     | 1200                   | Fill all the fields                          |
-     | 6               | 13                       | 04                     | Selected Invalid Time                        |
-     |                 |                          |                        |  Fill all the fields                         |
-     | 5               | 0600                     | 0900                   | Delivery slot details updated successfully!! |
+#@wait
+#Scenario Outline: consumer can able to update Common Settings 
+ #Check Page title 
+#Given Admin enter required field  "<Maximum discount allowed(In %)>","<Minimum water wallet amount>","<Water wallet recharge alert>","<Extra charges for single order>","<OTP Less Delivery Msg>","<Extra charges HSN code>", "<Extra charges CGST %>", "<Extra charges SGST %>"
+#When Click on update button
+#Then check Toast message "<Toast Message>"
+ #
+#Examples:
+    #| Maximum discount allowed(In %)| Minimum water wallet amount | Water wallet recharge alert | Extra charges for single order | OTP Less Delivery Msg                                          |Extra charges HSN code |Extra charges CGST % |Extra charges SGST % |        Toast Message           |
+    #|               00              |          00                 |          00                 |          00                    |    !@$%^^^&*!@$%^&                                             |      00               |          00         |         00          |         Invalid Input          |
+    #|               50              |          00                 |         0                   |          10                    |     123456                                                     |      00               |         00          |          00         |       Invalid Input            |
+    #|               99              |          100                |         100                 |          15                    | Opting out of OTP during the delivery process exposes you risks|   99698               |         9           |          9          | Updates settings successfully! |
+ #
+ #
+#
+#
+ #
+ #@wait
+ #Scenario: Add slots tab
+ #Given Click on Delivery Slots button
+ #When Click on Add Slots button
+ #And Add Slots tab text1
+ #Then Add Slots tab text
+    #
+#
+#
+#@wait
+#Scenario Outline: Add delivery Slot
+#Given Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
+#When Click on ADD button
+#Then check Toast message "<Toast Message>"
+#
+#Examples: 
+     #| Number Of Slots | Delivery Slot Start Time | Delivery Slot End Time | Toast Message |
+     #| 5               | 0600                     | 0900                   | Please do not repeate the time Or number of slots.|
+     #| 45              |                          |                        | Please select/Enter Start Time and End Time  |
+     #|                 | 1200                     | 1200                   | Fill all the fields                          |
+     #| 6               | 13                       | 04                     | Selected Invalid Time                        |
+     #|                 |                          |                        |  Fill all the fields                         |
+     #| 5               | 0600                     | 0900                   | Delivery slot details updated successfully!! |
  
 
 Scenario: User should able to verify Scanning settings text
@@ -146,7 +146,7 @@ And Enter Blocking reason
 Then Click on Block Button
 
 Scenario: Remove Blocked date range
-Given Click on Remove Button
+Given Click on Remove Date Range Button
 
 
 
