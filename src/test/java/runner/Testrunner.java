@@ -21,7 +21,11 @@ import io.cucumber.junit.CucumberOptions;
 		//plugin = "html:target/cucumber"
 		plugin= {"pretty","html:target/cucumber.html",
 				//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-				}
+		 "html:target/cucumber.html", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" ,
+       		         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+       		        // "tech.grasshopper.pdf.extentreport.ExtentPdfCucumberReporter:output/ExtentPdfReport.pdf",
+       		        }
+		
 		 )
 public class Testrunner {
 	
