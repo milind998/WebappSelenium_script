@@ -29,46 +29,46 @@ Scenario: Check common Settings tab
 Given Click on common Settings tab
 Then Check All tab text
 
-#@wait
-#Scenario Outline: consumer can able to update Common Settings 
- #Check Page title 
-#Given Admin enter required field  "<Maximum discount allowed(In %)>","<Minimum water wallet amount>","<Water wallet recharge alert>","<Extra charges for single order>","<OTP Less Delivery Msg>","<Extra charges HSN code>", "<Extra charges CGST %>", "<Extra charges SGST %>"
-#When Click on update button
-#Then check Toast message "<Toast Message>"
- #
-#Examples:
-    #| Maximum discount allowed(In %)| Minimum water wallet amount | Water wallet recharge alert | Extra charges for single order | OTP Less Delivery Msg                                          |Extra charges HSN code |Extra charges CGST % |Extra charges SGST % |        Toast Message           |
-    #|               00              |          00                 |          00                 |          00                    |    !@$%^^^&*!@$%^&                                             |      00               |          00         |         00          |         Invalid Input          |
-    #|               50              |          00                 |         0                   |          10                    |     123456                                                     |      00               |         00          |          00         |       Invalid Input            |
-    #|               99              |          100                |         100                 |          15                    | Opting out of OTP during the delivery process exposes you risks|   99698               |         9           |          9          | Updates settings successfully! |
- #
- #
-#
-#
- #
- #@wait
- #Scenario: Add slots tab
- #Given Click on Delivery Slots button
- #When Click on Add Slots button
- #And Add Slots tab text1
- #Then Add Slots tab text
-    #
-#
-#
-#@wait
-#Scenario Outline: Add delivery Slot
-#Given Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
-#When Click on ADD button
-#Then check Toast message "<Toast Message>"
-#
-#Examples: 
-     #| Number Of Slots | Delivery Slot Start Time | Delivery Slot End Time | Toast Message |
-     #| 5               | 0600                     | 0900                   | Please do not repeate the time Or number of slots.|
-     #| 45              |                          |                        | Please select/Enter Start Time and End Time  |
-     #|                 | 1200                     | 1200                   | Fill all the fields                          |
-     #| 6               | 13                       | 04                     | Selected Invalid Time                        |
-     #|                 |                          |                        |  Fill all the fields                         |
-     #| 5               | 0600                     | 0900                   | Delivery slot details updated successfully!! |
+@wait
+Scenario Outline: consumer can able to update Common Settings 
+ Check Page title 
+Given Admin enter required field  "<Maximum discount allowed(In %)>","<Minimum water wallet amount>","<Water wallet recharge alert>","<Extra charges for single order>","<OTP Less Delivery Msg>","<Extra charges HSN code>", "<Extra charges CGST %>", "<Extra charges SGST %>"
+When Click on update button
+Then check Toast message "<Toast Message>"
+ 
+Examples:
+    | Maximum discount allowed(In %)| Minimum water wallet amount | Water wallet recharge alert | Extra charges for single order | OTP Less Delivery Msg                                          |Extra charges HSN code |Extra charges CGST % |Extra charges SGST % |        Toast Message           |
+    |               00              |          00                 |          00                 |          00                    |    !@$%^^^&*!@$%^&                                             |      00               |          00         |         00          |         Invalid Input          |
+    |               50              |          00                 |         0                   |          10                    |     123456                                                     |      00               |         00          |          00         |       Invalid Input            |
+    |               99              |          100                |         100                 |          15                    | Opting out of OTP during the delivery process exposes you risks|   99698               |         9           |          9          | Updates settings successfully! |
+ 
+ 
+
+
+ 
+ @wait
+ Scenario: Add slots tab
+ Given Click on Delivery Slots button
+ When Click on Add Slots button
+ And Add Slots tab text1
+ Then Add Slots tab text
+    
+
+
+@wait
+Scenario Outline: Add delivery Slot
+Given Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
+When Click on ADD button
+Then check Toast message "<Toast Message>"
+
+Examples: 
+     | Number Of Slots | Delivery Slot Start Time | Delivery Slot End Time | Toast Message |
+     | 5               | 0600                     | 0900                   | Please do not repeate the time Or number of slots.|
+     | 45              |                          |                        | Please select/Enter Start Time and End Time  |
+     |                 | 1200                     | 1200                   | Fill all the fields                          |
+     | 6               | 13                       | 04                     | Selected Invalid Time                        |
+     |                 |                          |                        |  Fill all the fields                         |
+     | 5               | 0600                     | 0900                   | Delivery slot details updated successfully!! |
  
 
 Scenario: User should able to verify Scanning settings text
@@ -416,82 +416,82 @@ Examples:
 
 
 
-@Wait
-Scenario: Check Cancellation fee setting
-Given Click on Cancellation fee setting
-Then Cancellation Fee Setting tab text
-
-
-@wait
-Scenario Outline: consumer can  able to update Cancellation fee setting
-Given admin enter data in required field  "<Supplier cancel fee>", "<Consumer cancel fee>"
-When Cancellation fee setting update button
-Then check Toast message "<Toast Message>"
- 
-Examples:
-    |Supplier cancel fee | Consumer cancel fee | Toast Message |
-    |      -234          |     -432            | Invalid input |
-    |     123            |     4567            | Updates settings successfully! |
-    |      0             |      0              | Updates settings successfully! |
-    
-     
-     
-     
-@wait
-Scenario: Check Force Consumer App Update
-Given Click on Force Consumer App Update
-Then Check All Radio button text
-
-@wait
-Scenario Outline: Check Consumer android app Force Update is mandatory
-Given Fill Textboxes to make Update mandatory for android "<Android Current Version>", "<Message>", "<Header>"
-When Click on Radio Button of Update is mandatory in android
-When Update Button of Force Consumer App
-Then check Toast message "Updated Successfully."
-
-Examples:
-| Android Current Version | Message                                | Header |
-| 0.1.135                 | !@#$%^&()                              | UPDATE |
-| 0.1.136                 | Update Android App for latest features | Please Update |
-
-
-
-@wait
-Scenario: Update Force App tour setting in Android
-Given Click on Radio Button of Update Force App tour setting in Android
-When Update Button of Force Consumer App
-Then check Toast message "Updated Successfully."
-
-@wait
-Scenario Outline: Check IOS app Force Update is mandatory
-Given Fill Textboxes to make Update mandatory for IOS "<Current Version>", "<Message>", "<Header>"
-When Click on Radio Button of Update is mandatory in IOS
-When Update Button of Force Consumer App
-Then check Toast message "Updated Successfully."
-
-Examples:
-|  Current Version        | Message                                | Header |
-| 0.1.1                   | !@#$%^&()                              | UPDATE |
-| 0.1.2                   | Update IOS App for latest features     | Please Update |
-
-
-
-@wait
-Scenario: Update Force App tour setting in IOS
-Given Click on Radio Button of Update Force App tour setting in IOS
-When Update Button of Force Consumer App
-Then check Toast message "Updated Successfully."
-
-
-
-@wait
-Scenario Outline: Check Web app Force Update is mandatory
-Given Fill Textboxes to make Update mandatory for WEBAPP "<Current Version>"
-When Click on Radio Button of Update is mandatory in WEBAPP
-When Update Button of Force Consumer App
-Then check Toast message "Updated Successfully."
-
-Examples:
-|  Current Version        | 
-| 0.0.149                 | 
-| 0.0.150                 | 
+#@Wait
+#Scenario: Check Cancellation fee setting
+#Given Click on Cancellation fee setting
+#Then Cancellation Fee Setting tab text
+#
+#
+#@wait
+#Scenario Outline: consumer can  able to update Cancellation fee setting
+#Given admin enter data in required field  "<Supplier cancel fee>", "<Consumer cancel fee>"
+#When Cancellation fee setting update button
+#Then check Toast message "<Toast Message>"
+ #
+#Examples:
+    #|Supplier cancel fee | Consumer cancel fee | Toast Message |
+    #|      -234          |     -432            | Invalid input |
+    #|     123            |     4567            | Updates settings successfully! |
+    #|      0             |      0              | Updates settings successfully! |
+    #
+     #
+     #
+     #
+#@wait
+#Scenario: Check Force Consumer App Update
+#Given Click on Force Consumer App Update
+#Then Check All Radio button text
+#
+#@wait
+#Scenario Outline: Check Consumer android app Force Update is mandatory
+#Given Fill Textboxes to make Update mandatory for android "<Android Current Version>", "<Message>", "<Header>"
+#When Click on Radio Button of Update is mandatory in android
+#When Update Button of Force Consumer App
+#Then check Toast message "Updated Successfully."
+#
+#Examples:
+#| Android Current Version | Message                                | Header |
+#| 0.1.135                 | !@#$%^&()                              | UPDATE |
+#| 0.1.136                 | Update Android App for latest features | Please Update |
+#
+#
+#
+#@wait
+#Scenario: Update Force App tour setting in Android
+#Given Click on Radio Button of Update Force App tour setting in Android
+#When Update Button of Force Consumer App
+#Then check Toast message "Updated Successfully."
+#
+#@wait
+#Scenario Outline: Check IOS app Force Update is mandatory
+#Given Fill Textboxes to make Update mandatory for IOS "<Current Version>", "<Message>", "<Header>"
+#When Click on Radio Button of Update is mandatory in IOS
+#When Update Button of Force Consumer App
+#Then check Toast message "Updated Successfully."
+#
+#Examples:
+#|  Current Version        | Message                                | Header |
+#| 0.1.1                   | !@#$%^&()                              | UPDATE |
+#| 0.1.2                   | Update IOS App for latest features     | Please Update |
+#
+#
+#
+#@wait
+#Scenario: Update Force App tour setting in IOS
+#Given Click on Radio Button of Update Force App tour setting in IOS
+#When Update Button of Force Consumer App
+#Then check Toast message "Updated Successfully."
+#
+#
+#
+#@wait
+#Scenario Outline: Check Web app Force Update is mandatory
+#Given Fill Textboxes to make Update mandatory for WEBAPP "<Current Version>"
+#When Click on Radio Button of Update is mandatory in WEBAPP
+#When Update Button of Force Consumer App
+#Then check Toast message "Updated Successfully."
+#
+#Examples:
+#|  Current Version        | 
+#| 0.0.149                 | 
+#| 0.0.150                 | 
