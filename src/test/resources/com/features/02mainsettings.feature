@@ -262,34 +262,34 @@ Given Click on Remove Button
 
 
 
-#@wait
-#Scenario: Update Sold By Distributor
-#Given Click on Sold by tab
-#And Select Distributor 
-#When Click on Update button
-#Then check toast messages "Toast Message"
-#
-#@wait
-#Scenario: Update Sold By Bookwater
-#Given Click on BookWater button
-#Then Check all tab text
-#
-#@wait
-#Scenario Outline: Check Sold By Bookwater Textboxes
-#
-#Given Fill all textboxes "<Company Name>", "<PAN Number>", "<GST Number>", "<Address>"
-#When  Click on Update button
-#Then check toast messages "Toast Message"
-#
-#Examples: 
-         #| Company Name   | PAN Number | GST Number     | Address             | Toast Message |
-         #| 774774         | uuuweuyuweu| yuweyuyuw      | yuweyuyuw           | Invalid Input |
-         #| Milind PVT LTD | 1234567899 | 1234567899     | Chennai, Tamil Nadu | Invalid Input |
-         #| Milind PVT LTD | AJRPI7125G | -83438938938   | -Chennai, Tamil Nadu| Invalid Input |
-         #| Milind PVT LTD | AJRPI7125G | 22AAAAA0000A1Z5| Chennai, Tamil Nadu | Updates settings successfully!|
-#
-#
-#
+@wait
+Scenario: Update Sold By Distributor
+Given Click on Sold by tab
+And Select Distributor 
+When Click on Update button
+Then check toast messages "Toast Message"
+
+@wait
+Scenario: Update Sold By Bookwater
+Given Click on BookWater button
+Then Check all tab text
+
+@wait
+Scenario Outline: Check Sold By Bookwater Textboxes
+
+Given Fill all textboxes "<Company Name>", "<PAN Number>", "<GST Number>", "<Address>"
+When  Click on Update button
+Then check toast messages "Toast Message"
+
+Examples: 
+         | Company Name   | PAN Number | GST Number     | Address             | Toast Message |
+         | 774774         | uuuweuyuweu| yuweyuyuw      | yuweyuyuw           | Invalid Input |
+         | Milind PVT LTD | 1234567899 | 1234567899     | Chennai, Tamil Nadu | Invalid Input |
+         | Milind PVT LTD | AJRPI7125G | -83438938938   | -Chennai, Tamil Nadu| Invalid Input |
+         | Milind PVT LTD | AJRPI7125G | 22AAAAA0000A1Z5| Chennai, Tamil Nadu | Updates settings successfully!|
+
+
+
 #@Wait
 #Scenario: Check Referral setting
 #Given Click on Referral setting button
