@@ -71,197 +71,197 @@ Examples:
      | 5               | 0600                     | 0900                   | Delivery slot details updated successfully!! |
  
 
-#Scenario: User should able to verify Scanning settings text
-#Given Click on Block setting
-#When Click on Scanning button
-#Then Check AllB tab Text
-#
-#Scenario: User Should able to Update scanning settings 
-#Given select each radio button and Click on ScanningUpdate button
-#Then Check Toast Message "Updates settings successfully!"
-#
-#
-#Scenario: User Should able to Block Payment Methods
-#Given Click on Block Payments button
-#When Click on Payment Methods button
-#Then Check Payment Methods text
-#
-#@wait
-#Scenario: Block Paysharp UPI Payment Method
-#Given Select Payment method
-#When Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Block Paysharp QR Payment Method
-#Given Select Payment method
-#When Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Block Virtual Bank Payment Method
-#Given Select Payment method
-#When Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Block RazorPay Payment Method
-#Given Select Payment method
-#When Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Block Wallet Payment Method
-#Given Select Payment method
-#When Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Block Paysharp Search UPI Payment Method
-#Given Select Payment method
-#When Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Block All paysharp payments Payment Method
-#Given Select Payment method
-#When Enter Blocking reason
-#Then Click on Block Button 
-#
-#@wait
-#Scenario: Remove Blocked payment methods
-#Given Click on Remove Button
-#
-#
-#
-#Scenario: Check Block Booking type text
-#Given Click  on Booking button
-#When Click  on Block Booking type         
-#Then Check Block Booking type text
-#
-#Scenario: Block Booking By Date Range
-#Given Select Date Range Block Booking type
-#When Select Date Range
-#And Enter Blocking reason
-#Then Click on Block Button
-#
-#Scenario: Remove Blocked date range
-#Given Click on Remove Date Range Button
-#
-#
-#
-#@wait
-#Scenario: Block Booking By Booking Type
-#Given Select Block Booking Type
-#When Select Order Type
-#And Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Remove Blocked Booking Type
-#Given Click on Remove Button
-#
-#
-#
-#@wait 
-#Scenario: Check Text of of Pincode tab
-#Given Click on Pincode tab
-#Then Check Pincode tab Text
-#
-#
-#@wait
-#Scenario: Block Booking By Pincodes
-#Given Select State
-#When Select district
-#And Select pincode
-#And Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Remove Blocked Booking Type
-#Given Click on Remove Button
-#
-#@wait
-#Scenario: Block Booking By Areas
-#Given Click on Area Combobox
-#And Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Remove Blocked Booking Type
-#Given Click on Remove Button
-#
-#@wait
-#Scenario: Block Booking By Districts
-#Given Click on District Combobox
-#And Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Remove Blocked Booking Type
-#Given Click on Remove Button
-#
-#
-#@wait
-#Scenario: Block Booking By States
-#Given Click on State Combobox
-#And Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Remove Blocked Booking Type
-#Given Click on Remove Button
-#
-#
-#
-#@wait
-#Scenario: Block Booking By Countries
-#Given Click on Countries Combobox
-#And Enter Blocking reason
-#Then Click on Block Button
-#
-#@wait
-#Scenario: Remove Blocked Booking Type
-#Given Click on Remove Button
-#
-#
-#@wait
-#Scenario Outline: User should able to Update Block Time setting
-#Given Click on clock textbox and enter time "<Start Time>", "<End Time>"
-#When Block Time Settings update button
-#Then check Toast message "<Toast Message>"
-#
-#Examples:
-          #|Start Time | End Time | Toast Message        |
-          #|1050PM     | 1130PM   | Updates settings successfully! |
-          #|1222AM     | 3434PM   | Invalid Input        |
-          #|0900PM     | 1100PM   | Updates settings successfully! |
-#@wait
-#Scenario: Check Clock and select time
-#Given Click on Clock and select time
-#When Block Time Settings update button
-#Then check Toast message "Updates settings successfully!"
-#
-#
-#@wait
-#Scenario Outline: Block Auto Cancel
-#Given Click on Auto Cancel Button
-#When Enter Block reason "<Reason>"
-#
-#Examples:
-#| Reason |
-#| !@$%^&(*)|
-#| 1234567890 |
-#| Block By Automation testing |
-#
-#@wait
-#Scenario: Remove Blocked Booking Type
-#Given Click on Remove Button
-#
+Scenario: User should able to verify Scanning settings text
+Given Click on Block setting
+When Click on Scanning button
+Then Check AllB tab Text
+
+Scenario: User Should able to Update scanning settings 
+Given select each radio button and Click on ScanningUpdate button
+Then Check Toast Message "Updates settings successfully!"
+
+
+Scenario: User Should able to Block Payment Methods
+Given Click on Block Payments button
+When Click on Payment Methods button
+Then Check Payment Methods text
+
+@wait
+Scenario: Block Paysharp UPI Payment Method
+Given Select Payment method
+When Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Block Paysharp QR Payment Method
+Given Select Payment method
+When Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Block Virtual Bank Payment Method
+Given Select Payment method
+When Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Block RazorPay Payment Method
+Given Select Payment method
+When Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Block Wallet Payment Method
+Given Select Payment method
+When Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Block Paysharp Search UPI Payment Method
+Given Select Payment method
+When Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Block All paysharp payments Payment Method
+Given Select Payment method
+When Enter Blocking reason
+Then Click on Block Button 
+
+@wait
+Scenario: Remove Blocked payment methods
+Given Click on Remove Button
+
+
+
+Scenario: Check Block Booking type text
+Given Click  on Booking button
+When Click  on Block Booking type         
+Then Check Block Booking type text
+
+Scenario: Block Booking By Date Range
+Given Select Date Range Block Booking type
+When Select Date Range
+And Enter Blocking reason
+Then Click on Block Button
+
+Scenario: Remove Blocked date range
+Given Click on Remove Date Range Button
+
+
+
+@wait
+Scenario: Block Booking By Booking Type
+Given Select Block Booking Type
+When Select Order Type
+And Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Remove Blocked Booking Type
+Given Click on Remove Button
+
+
+
+@wait 
+Scenario: Check Text of of Pincode tab
+Given Click on Pincode tab
+Then Check Pincode tab Text
+
+
+@wait
+Scenario: Block Booking By Pincodes
+Given Select State
+When Select district
+And Select pincode
+And Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Remove Blocked Booking Type
+Given Click on Remove Button
+
+@wait
+Scenario: Block Booking By Areas
+Given Click on Area Combobox
+And Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Remove Blocked Booking Type
+Given Click on Remove Button
+
+@wait
+Scenario: Block Booking By Districts
+Given Click on District Combobox
+And Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Remove Blocked Booking Type
+Given Click on Remove Button
+
+
+@wait
+Scenario: Block Booking By States
+Given Click on State Combobox
+And Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Remove Blocked Booking Type
+Given Click on Remove Button
+
+
+
+@wait
+Scenario: Block Booking By Countries
+Given Click on Countries Combobox
+And Enter Blocking reason
+Then Click on Block Button
+
+@wait
+Scenario: Remove Blocked Booking Type
+Given Click on Remove Button
+
+
+@wait
+Scenario Outline: User should able to Update Block Time setting
+Given Click on clock textbox and enter time "<Start Time>", "<End Time>"
+When Block Time Settings update button
+Then check Toast message "<Toast Message>"
+
+Examples:
+          |Start Time | End Time | Toast Message        |
+          |1050PM     | 1130PM   | Updates settings successfully! |
+          |1222AM     | 3434PM   | Invalid Input        |
+          |0900PM     | 1100PM   | Updates settings successfully! |
+@wait
+Scenario: Check Clock and select time
+Given Click on Clock and select time
+When Block Time Settings update button
+Then check Toast message "Updates settings successfully!"
+
+
+@wait
+Scenario Outline: Block Auto Cancel
+Given Click on Auto Cancel Button
+When Enter Block reason "<Reason>"
+
+Examples:
+| Reason |
+| !@$%^&(*)|
+| 1234567890 |
+| Block By Automation testing |
+
+@wait
+Scenario: Remove Blocked Booking Type
+Given Click on Remove Button
+
 #================================================================
-#
-#
-#
+
+
+
 #@wait
 #Scenario: Update Sold By Distributor
 #Given Click on Sold by tab
