@@ -258,7 +258,7 @@ Examples:
 Scenario: Remove Blocked Booking Type
 Given Click on Remove Button
 
-#================================================================
+
 
 
 
@@ -393,104 +393,104 @@ Examples:
 |    1234                        |   435                |       465                          |     Updates settings successfully!    |
 |    2                           |    45                |            20                      |    Updates settings successfully!     |
 
-#@Wait 
-#Scenario: Click on PWD Convenience Fee
-#Given Click on PWD Convenience Fee
-#Then Test All Tab Text
+@Wait 
+Scenario: Click on PWD Convenience Fee
+Given Click on PWD Convenience Fee
+Then Test All Tab Text
 
 
-#@wait
-#Scenario Outline: consumer can able to update PWD Convenience Fee 
-#Given Admin enter required field  "<PWD Conv fee CGST>", "<PWD Conv fee SGST>", "<PWD Conv fee GST code>"
-#When PWDconFee update button
-#Then check Toast message "<Toast Message>"
- #
-#Examples:
-    #|PWD Conv fee CGST | PWD Conv fee SGST | PWD Conv fee GST code | Toast Message        |
-    #| 00000000000      |   000000          |      000000           | Updates settings successfully! |
-    #|      -234        |     -432          |       -454            |   Invalid Input  |
-    #|     123          |     4567          |       100             | Updates settings successfully! |
-    #|      7.00        |      8.00         |       2201            | Updates settings successfully! |
+@wait
+Scenario Outline: consumer can able to update PWD Convenience Fee 
+Given Admin enter required field  "<PWD Conv fee CGST>", "<PWD Conv fee SGST>", "<PWD Conv fee GST code>"
+When PWDconFee update button
+Then check Toast message "<Toast Message>"
+ 
+Examples:
+    |PWD Conv fee CGST | PWD Conv fee SGST | PWD Conv fee GST code | Toast Message        |
+    | 00000000000      |   000000          |      000000           | Updates settings successfully! |
+    |      -234        |     -432          |       -454            |   Invalid Input  |
+    |     123          |     4567          |       100             | Updates settings successfully! |
+    |      7.00        |      8.00         |       2201            | Updates settings successfully! |
  
 
 
 
-#@Wait
-#Scenario: Check Cancellation fee setting
-#Given Click on Cancellation fee setting
-#Then Cancellation Fee Setting tab text
-#
-#
-#@wait
-#Scenario Outline: consumer can  able to update Cancellation fee setting
-#Given admin enter data in required field  "<Supplier cancel fee>", "<Consumer cancel fee>"
-#When Cancellation fee setting update button
-#Then check Toast message "<Toast Message>"
- #
-#Examples:
-    #|Supplier cancel fee | Consumer cancel fee | Toast Message |
-    #|      -234          |     -432            | Invalid input |
-    #|     123            |     4567            | Updates settings successfully! |
-    #|      0             |      0              | Updates settings successfully! |
-    #
-     #
-     #
-     #
-#@wait
-#Scenario: Check Force Consumer App Update
-#Given Click on Force Consumer App Update
-#Then Check All Radio button text
-#
-#@wait
-#Scenario Outline: Check Consumer android app Force Update is mandatory
-#Given Fill Textboxes to make Update mandatory for android "<Android Current Version>", "<Message>", "<Header>"
-#When Click on Radio Button of Update is mandatory in android
-#When Update Button of Force Consumer App
-#Then check Toast message "Updated Successfully."
-#
-#Examples:
-#| Android Current Version | Message                                | Header |
-#| 0.1.135                 | !@#$%^&()                              | UPDATE |
-#| 0.1.136                 | Update Android App for latest features | Please Update |
-#
-#
-#
-#@wait
-#Scenario: Update Force App tour setting in Android
-#Given Click on Radio Button of Update Force App tour setting in Android
-#When Update Button of Force Consumer App
-#Then check Toast message "Updated Successfully."
-#
-#@wait
-#Scenario Outline: Check IOS app Force Update is mandatory
-#Given Fill Textboxes to make Update mandatory for IOS "<Current Version>", "<Message>", "<Header>"
-#When Click on Radio Button of Update is mandatory in IOS
-#When Update Button of Force Consumer App
-#Then check Toast message "Updated Successfully."
-#
-#Examples:
-#|  Current Version        | Message                                | Header |
-#| 0.1.1                   | !@#$%^&()                              | UPDATE |
-#| 0.1.2                   | Update IOS App for latest features     | Please Update |
-#
-#
-#
-#@wait
-#Scenario: Update Force App tour setting in IOS
-#Given Click on Radio Button of Update Force App tour setting in IOS
-#When Update Button of Force Consumer App
-#Then check Toast message "Updated Successfully."
-#
-#
-#
-#@wait
-#Scenario Outline: Check Web app Force Update is mandatory
-#Given Fill Textboxes to make Update mandatory for WEBAPP "<Current Version>"
-#When Click on Radio Button of Update is mandatory in WEBAPP
-#When Update Button of Force Consumer App
-#Then check Toast message "Updated Successfully."
-#
-#Examples:
-#|  Current Version        | 
-#| 0.0.149                 | 
-#| 0.0.150                 | 
+@Wait
+Scenario: Check Cancellation fee setting
+Given Click on Cancellation fee setting
+Then Cancellation Fee Setting tab text
+
+
+@wait
+Scenario Outline: consumer can  able to update Cancellation fee setting
+Given admin enter data in required field  "<Supplier cancel fee>", "<Consumer cancel fee>"
+When Cancellation fee setting update button
+Then check Toast message "<Toast Message>"
+ 
+Examples:
+    |Supplier cancel fee | Consumer cancel fee | Toast Message |
+    |      -234          |     -432            | Invalid input |
+    |     123            |     4567            | Updates settings successfully! |
+    |      0             |      0              | Updates settings successfully! |
+    
+     
+     
+     
+@wait
+Scenario: Check Force Consumer App Update
+Given Click on Force Consumer App Update
+Then Check All Radio button text
+
+@wait
+Scenario Outline: Check Consumer android app Force Update is mandatory
+Given Fill Textboxes to make Update mandatory for android "<Android Current Version>", "<Message>", "<Header>"
+When Click on Radio Button of Update is mandatory in android
+When Update Button of Force Consumer App
+Then check Toast message "Updated Successfully."
+
+Examples:
+| Android Current Version | Message                                | Header |
+| 0.1.135                 | !@$%^&()                              | UPDATE |
+| 0.1.136                 | Update Android App for latest features | Please Update |
+
+
+
+@wait
+Scenario: Update Force App tour setting in Android
+Given Click on Radio Button of Update Force App tour setting in Android
+When Update Button of Force Consumer App
+Then check Toast message "Updated Successfully."
+
+@wait
+Scenario Outline: Check IOS app Force Update is mandatory
+Given Fill Textboxes to make Update mandatory for IOS "<Current Version>", "<Message>", "<Header>"
+When Click on Radio Button of Update is mandatory in IOS
+When Update Button of Force Consumer App
+Then check Toast message "Updated Successfully."
+
+Examples:
+|  Current Version        | Message                                | Header |
+| 0.1.1                   | !@$%^&()                              | UPDATE |
+| 0.1.2                   | Update IOS App for latest features     | Please Update |
+
+
+
+@wait
+Scenario: Update Force App tour setting in IOS
+Given Click on Radio Button of Update Force App tour setting in IOS
+When Update Button of Force Consumer App
+Then check Toast message "Updated Successfully."
+
+
+
+@wait
+Scenario Outline: Check Web app Force Update is mandatory
+Given Fill Textboxes to make Update mandatory for WEBAPP "<Current Version>"
+When Click on Radio Button of Update is mandatory in WEBAPP
+When Update Button of Force Consumer App
+Then check Toast message "Updated Successfully."
+
+Examples:
+|  Current Version        | 
+| 0.0.149                 | 
+| 0.0.150                 | 
