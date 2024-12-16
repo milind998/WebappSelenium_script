@@ -354,51 +354,51 @@ Examples:
 
 
     
-#@Wait
-#Scenario: Check Time setting
-#Given Click on Time setting
-#Then Time tab text
-#
-#
-#@wait
-#Scenario Outline: consumer can  able to Time setting
-#Given admin enter data in required field  "<Supplier order acceptance intervel(minutes)>","<Consumer notify time>","<Consumer disable time>","<Distributor notify time>","<Distributor disable time>","<WFS notify time>","<WFS disable time>"
-#When Time Settings update button
-#Then check Toast message "<Toast Message>"
- #
-#Examples:
-   #|Supplier order acceptance intervel(minutes)|Consumer notify time|Consumer disable time|Distributor notify time|Distributor disable time|WFS notify time|WFS disable time| Toast Message |
-   #|                 0000                      |          -12       |           00        |            123        |         9              |       0       |      0         | Invalid input |
-   #|                  -12                      |           99       |        98           |             00        |         -12            |          123  |       -123     | Invalid input |
-   #|                15                         |        5           |           5         |            4          |          4             |       6       |      2         | Updates settings successfully! |
-#
-#
-#
-#@wait 
-#Scenario: Click on Settlement Settings
-#Given Click on Settlement Settings button
-#Then Check Settlement Settings text
-#
-#
-#
-#@wait
-#Scenario Outline: Update Settlement Settings
-#Given Enter Data in Settlemetn Settings "<Distributor Settlement Price>", "<Base Watercan Price>", "<Filling Station Settlement Price>"
-#When Click on Settlement Settings Update Button
-#Then check Toast message "<Toast Message>"
-#
-#Examples:
-#|  Distributor Settlement Price  | Base Watercan Price  |  Filling Station Settlement Price  |    Toast Message                      |
-#|                                |                      |                                    | Error in reducing the wallet amount!  |
-#|    1234                        |   435                |       465                          |     Updates settings successfully!    |
-#|    2                           |    45                |            20                      |    Updates settings successfully!     |
-#
+@Wait
+Scenario: Check Time setting
+Given Click on Time setting
+Then Time tab text
+
+
+@wait
+Scenario Outline: consumer can  able to Time setting
+Given admin enter data in required field  "<Supplier order acceptance intervel(minutes)>","<Consumer notify time>","<Consumer disable time>","<Distributor notify time>","<Distributor disable time>","<WFS notify time>","<WFS disable time>"
+When Time Settings update button
+Then check Toast message "<Toast Message>"
+ 
+Examples:
+   |Supplier order acceptance intervel(minutes)|Consumer notify time|Consumer disable time|Distributor notify time|Distributor disable time|WFS notify time|WFS disable time| Toast Message |
+   |                 0000                      |          -12       |           00        |            123        |         9              |       0       |      0         | Invalid input |
+   |                  -12                      |           99       |        98           |             00        |         -12            |          123  |       -123     | Invalid input |
+   |                15                         |        5           |           5         |            4          |          4             |       6       |      2         | Updates settings successfully! |
+
+
+
+@wait 
+Scenario: Click on Settlement Settings
+Given Click on Settlement Settings button
+Then Check Settlement Settings text
+
+
+
+@wait
+Scenario Outline: Update Settlement Settings
+Given Enter Data in Settlemetn Settings "<Distributor Settlement Price>", "<Base Watercan Price>", "<Filling Station Settlement Price>"
+When Click on Settlement Settings Update Button
+Then check Toast message "<Toast Message>"
+
+Examples:
+|  Distributor Settlement Price  | Base Watercan Price  |  Filling Station Settlement Price  |    Toast Message                      |
+|                                |                      |                                    | Error in reducing the wallet amount!  |
+|    1234                        |   435                |       465                          |     Updates settings successfully!    |
+|    2                           |    45                |            20                      |    Updates settings successfully!     |
+
 #@Wait 
 #Scenario: Click on PWD Convenience Fee
 #Given Click on PWD Convenience Fee
 #Then Test All Tab Text
-#
-#
+
+
 #@wait
 #Scenario Outline: consumer can able to update PWD Convenience Fee 
 #Given Admin enter required field  "<PWD Conv fee CGST>", "<PWD Conv fee SGST>", "<PWD Conv fee GST code>"
