@@ -1,5 +1,6 @@
 package com.pages;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -351,8 +352,11 @@ public class promoCode extends mainsettingsPage {
 
 
 public void promoCodePageOnDashBoard() {
-	WebDriverWait wait = new WebDriverWait(ldriver, 10);
-	WebElement element = wait.until(ExpectedConditions.elementToBeClickable(promoCodeTab));
+	//WebDriverWait wait = new WebDriverWait(ldriver, 10);
+
+
+	 WebDriverWait wait = new WebDriverWait(ldriver, 10);
+	 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(promoCodeTab));
 	((JavascriptExecutor) ldriver).executeScript("arguments[0].click();", element);
 }
 }
