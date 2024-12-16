@@ -258,7 +258,6 @@ Examples:
 Scenario: Remove Blocked Booking Type
 Given Click on Remove Button
 
-
 #================================================================
 
 
