@@ -290,70 +290,70 @@ Examples:
 
 
 
-#@Wait
-#Scenario: Check Referral setting
-#Given Click on Referral setting button
-#Then Referral Setting tab text
-#
-#
-#@wait
-#Scenario Outline: User can  able to update Referrer setting
-#Given Select Sign UP
-#When admin enter data in Sign UP field  "<Water drops for referrer>","<Water drops for referee>"
-#And Referral Setting update button
-#Then Toast message "<Toast Message>"
- #
-#Examples:
-   #|Water drops for referrer    |Water drops for referee|  Toast Message                |
-   #|              55            |          2            | There were no changes made for updating the referral configurations! |
-   #|              0000          |          00           |  Successfully configured referral settings!  |
-   #| 554444444444444            |   434343434343434     |Unable to update the referral settings! |
-   #|               0             |         4             | Successfully configured referral settings! |
-   #|                  55        |           2           | Successfully configured referral settings!   |
- #
-#
-#
-#@wait
-#Scenario: Check Consumer Referee & Referrer and Influencer rewards text
-#Given Select Order Completion tab button
-#Then Check Referee & Referrer and Influencer rewards text
-#
-#
-#@wait
-#Scenario Outline: Consumer Referee & Referrer rewards after Order Completion
-#Given Enter data "<Referrer Reward Limit>", "<Referee Reward Limit>", "<Water Drops Per Order>", "<Worth Of Each Water Drop>", "<Water drops per order>","<Worth of each waterdrop>"
-#When Order Completion Update Button
-#Then Toast message "<Toast Message>"
-#
-#Examples:
-#|Referrer Reward Limit | Referee Reward Limit | Water Drops Per Order | Worth Of Each Water Drop | Water drops per order | Worth of each waterdrop | Toast Message  |
-#| 3                    |        2             |          55           |        1                 |        11             |            5            |  There were no changes made for updating the referral configurations! |
-#|      1               |       1              |          45           |        2                 |        10             |            2            |  Successfully configured referral settings! |
-#| 3                    |        2             |          55           |        1                 |        11             |            1           |  Successfully configured referral settings! |
-#
-#
-#@Wait
-#Scenario: Click on Convenience Fee Setting
-#Given Click on Convenience Fee Setting
-#Then Print All Tab Text
-#
-#@wait
-#Scenario Outline: consumer can able to update Convenience Fee Settings 
-#Given Admin enter required field  "<Conv fee long term booking>", "<Conc fee single booking>", "<Conv fee CGST (%)>", "<Conv fee SGST (%)>","<Conv fee GST code>"
-#When conFeeSetting update button
-#Then check Toast message "<Toast Message>"
- #
-#Examples:
-    #|Conv fee long term booking| Conc fee single booking| Conv fee CGST (%)| Conv fee SGST (%) | Conv fee GST code | Toast Message |
-    #| 00000000000              |   000000               |    000000        |   00000           |     00000         | Updates settings successfully! |
-    #|      -234                |     -432               |       -454       |           -657    | fakeGSTcode       |    Invalid Input |
-    #|     123                  |     4567               |       100        |           2065    |    abcdefgh       | Invalid Input |
-    #|      3.50                |      0.00              |       9.00       |           9.00    |    99859          | Updates settings successfully! |
- #
-#
-#
-#
-    #
+@Wait
+Scenario: Check Referral setting
+Given Click on Referral setting button
+Then Referral Setting tab text
+
+
+@wait
+Scenario Outline: User can  able to update Referrer setting
+Given Select Sign UP
+When admin enter data in Sign UP field  "<Water drops for referrer>","<Water drops for referee>"
+And Referral Setting update button
+Then Toast message "<Toast Message>"
+ 
+Examples:
+   |Water drops for referrer    |Water drops for referee|  Toast Message                |
+   |              55            |          2            | There were no changes made for updating the referral configurations! |
+   |              0000          |          00           |  Successfully configured referral settings!  |
+   | 554444444444444            |   434343434343434     |Unable to update the referral settings! |
+   |               0             |         4             | Successfully configured referral settings! |
+   |                  55        |           2           | Successfully configured referral settings!   |
+ 
+
+
+@wait
+Scenario: Check Consumer Referee & Referrer and Influencer rewards text
+Given Select Order Completion tab button
+Then Check Referee & Referrer and Influencer rewards text
+
+
+@wait
+Scenario Outline: Consumer Referee & Referrer rewards after Order Completion
+Given Enter data "<Referrer Reward Limit>", "<Referee Reward Limit>", "<Water Drops Per Order>", "<Worth Of Each Water Drop>", "<Water drops per order>","<Worth of each waterdrop>"
+When Order Completion Update Button
+Then Toast message "<Toast Message>"
+
+Examples:
+|Referrer Reward Limit | Referee Reward Limit | Water Drops Per Order | Worth Of Each Water Drop | Water drops per order | Worth of each waterdrop | Toast Message  |
+| 3                    |        2             |          55           |        1                 |        11             |            5            |  There were no changes made for updating the referral configurations! |
+|      1               |       1              |          45           |        2                 |        10             |            2            |  Successfully configured referral settings! |
+| 3                    |        2             |          55           |        1                 |        11             |            1           |  Successfully configured referral settings! |
+
+
+@Wait
+Scenario: Click on Convenience Fee Setting
+Given Click on Convenience Fee Setting
+Then Print All Tab Text
+
+@wait
+Scenario Outline: consumer can able to update Convenience Fee Settings 
+Given Admin enter required field  "<Conv fee long term booking>", "<Conc fee single booking>", "<Conv fee CGST (%)>", "<Conv fee SGST (%)>","<Conv fee GST code>"
+When conFeeSetting update button
+Then check Toast message "<Toast Message>"
+ 
+Examples:
+    |Conv fee long term booking| Conc fee single booking| Conv fee CGST (%)| Conv fee SGST (%) | Conv fee GST code | Toast Message |
+    | 00000000000              |   000000               |    000000        |   00000           |     00000         | Updates settings successfully! |
+    |      -234                |     -432               |       -454       |           -657    | fakeGSTcode       |    Invalid Input |
+    |     123                  |     4567               |       100        |           2065    |    abcdefgh       | Invalid Input |
+    |      3.50                |      0.00              |       9.00       |           9.00    |    99859          | Updates settings successfully! |
+ 
+
+
+
+    
 #@Wait
 #Scenario: Check Time setting
 #Given Click on Time setting
