@@ -766,10 +766,10 @@ public class stepsMainSetting {
 	@Then("Cancellation Fee Setting tab text")
 	public void cancellation_fee_setting_tab_text() {
 		String[] CancellationFeeSettingTab = { "Supplier cancel fee %", "Consumer cancel fee %" };
-		for (int a = 27; a <= 28; a++) {
+		for (int a = 28; a <= 29; a++) {
 			String actResult = kk.CancellationFeeSettingTabText(a).getText();
 			System.out.println(actResult);
-			String expResult = CancellationFeeSettingTab[a - 27];
+			String expResult = CancellationFeeSettingTab[a - 28];
 			Assert.assertEquals(actResult, expResult);
 		}
 	}
@@ -797,7 +797,7 @@ public class stepsMainSetting {
 
 	@Then("Check All Radio button text")
 	public void check_all_radio_button_text() {
-		String [] Radio_Buttons = { "Update Is mandatory","Force App Tour","Update Is mandatory","Force App Tour","Force App Tour"};
+		String [] Radio_Buttons = { "Update Is mandatory","Force App Tour","Update Is mandatory","Force App Tour"};
 	    for (int i=1; i<=5; i++) {
 		String actResult = kk.All_Radio_ButtonText(i).getText();
 		System.out.println(actResult);

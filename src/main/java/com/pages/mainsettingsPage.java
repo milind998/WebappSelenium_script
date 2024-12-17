@@ -1253,7 +1253,7 @@ public class mainsettingsPage extends Home {
 		return CancellationFeeSettingText;
 	}
 
-	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq'])[27]")
+	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq'])[28]")
 	//@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq'])[26]")
 	@CacheLookup
 	WebElement SupplierCancelFeeBox;
@@ -1263,7 +1263,7 @@ public class mainsettingsPage extends Home {
 		SupplierCancelFeeBox.sendKeys(SupplierCancelFee);
 	}
 
-	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq'])[28]")
+	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq'])[29]")
 	//@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq'])[27]")
 
 	@CacheLookup
@@ -1287,7 +1287,7 @@ public class mainsettingsPage extends Home {
 	
 	//=====================================================Force Consumer App Update Settings============================================
 	
-	@FindBy(xpath="//*[text()='Force Consumer Apps Update']")
+	@FindBy(xpath="//*[text()='Force Apps Update']")
 	@CacheLookup
 	WebElement Force_Consumer_Apps_UpdateButton;
 	public void Force_Consumer_Apps_Update_Tab () {
@@ -1334,8 +1334,8 @@ public class mainsettingsPage extends Home {
 	}
 	
 	public void Select_RadioButton_UpdateISMandatory_Android() {
-        WebElement radioButton_Of_UpdateISMandatory1 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[1]"));
-        WebElement radioButton_Of_UpdateISMandatory2 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[1]"));
+        WebElement radioButton_Of_UpdateISMandatory1 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[3]"));
+        WebElement radioButton_Of_UpdateISMandatory2 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[3]"));
 
         if (radioButton_Of_UpdateISMandatory1.isSelected()) {
         	radioButton_Of_UpdateISMandatory2.click();
@@ -1352,8 +1352,8 @@ public class mainsettingsPage extends Home {
 	
 	
 	public void Select_RadioButton_ForceAppTour_Android() {
-		WebElement radioButton_Of_UpdateForceAppTour1 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[2]"));
-        WebElement radioButton_Of_UpdateForceAppTour2 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[2]"));
+		WebElement radioButton_Of_UpdateForceAppTour1 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[4]"));
+        WebElement radioButton_Of_UpdateForceAppTour2 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[4]"));
 
         if (radioButton_Of_UpdateForceAppTour1.isSelected()) {
         	radioButton_Of_UpdateForceAppTour2.click();
@@ -1364,7 +1364,7 @@ public class mainsettingsPage extends Home {
 	}
 	
 	
-	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1o6z5ng'])[4]")
+	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1o6z5ng'])[7]")
 	@CacheLookup
 	WebElement ios_CurrentVersion;
 
@@ -1374,7 +1374,7 @@ public class mainsettingsPage extends Home {
 	}
 	
 	
-	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1o6z5ng'])[5]")
+	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1o6z5ng'])[8]")
 	@CacheLookup
 	WebElement ios_message;
 
@@ -1384,7 +1384,7 @@ public class mainsettingsPage extends Home {
 	}
 	
 	
-	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1o6z5ng'])[6]")
+	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1o6z5ng'])[9]")
 	@CacheLookup
 	WebElement ios_header;
 
@@ -1395,8 +1395,8 @@ public class mainsettingsPage extends Home {
 	
 	
 	public void Select_RadioButton_UpdateISMandatory_ios() {
-        WebElement radioButton_Of_UpdateISMandatory_ios1 = ldriver.findElement(By.xpath("(//*[@class=\"MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme\"])[3]"));
-        WebElement radioButton_Of_UpdateISMandatory_ios2 = ldriver.findElement(By.xpath("(//*[@class=\"MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme\"])[3]"));
+        WebElement radioButton_Of_UpdateISMandatory_ios1 = ldriver.findElement(By.xpath("(//*[@class=\"MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme\"])[6]"));
+        WebElement radioButton_Of_UpdateISMandatory_ios2 = ldriver.findElement(By.xpath("(//*[@class=\"MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme\"])[6]"));
 
         if (radioButton_Of_UpdateISMandatory_ios1.isSelected()) {
         	radioButton_Of_UpdateISMandatory_ios2.click();
@@ -1407,8 +1407,8 @@ public class mainsettingsPage extends Home {
 	}
 	
 	public void Select_RadioButton_ForceAppTour_ios() {
-		WebElement radioButton_Of_UpdateForceAppTour_ios1 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[4]"));
-        WebElement radioButton_Of_UpdateForceAppTour_ios2 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[4]"));
+		WebElement radioButton_Of_UpdateForceAppTour_ios1 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[7]"));
+        WebElement radioButton_Of_UpdateForceAppTour_ios2 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[7]"));
 
         if (radioButton_Of_UpdateForceAppTour_ios1.isSelected()) {
         	radioButton_Of_UpdateForceAppTour_ios2.click();
@@ -1429,8 +1429,8 @@ public class mainsettingsPage extends Home {
 	
 	
 	public void Select_RadioButton_ForceAppTour_webapp() {
-		WebElement radioButton_Of_UpdateForceAppTour_webapp1 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[5]"));
-        WebElement radioButton_Of_UpdateForceAppTour_webapp2 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[5]"));
+		WebElement radioButton_Of_UpdateForceAppTour_webapp1 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[8]"));
+        WebElement radioButton_Of_UpdateForceAppTour_webapp2 = ldriver.findElement(By.xpath("(//*[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-1a5icme'])[8]"));
 
         if (radioButton_Of_UpdateForceAppTour_webapp1.isSelected()) {
         	radioButton_Of_UpdateForceAppTour_webapp2.click();

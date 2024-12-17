@@ -437,7 +437,7 @@ Examples:
      
      
 @wait
-Scenario: Check Force Consumer App Update
+Scenario: Check Force App Update
 Given Click on Force Consumer App Update
 Then Check All Radio button text
 
