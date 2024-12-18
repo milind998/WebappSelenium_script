@@ -51,9 +51,12 @@ public class mainsettingsPage extends Home {
 	WebElement commonSettingsButton;
 
 	public void commonSettings() throws InterruptedException {
-		Thread.sleep(5000);	
-		commonSettingsButton.click();
-		Thread.sleep(3000);
+//		Thread.sleep(5000);	
+//		commonSettingsButton.click();
+//		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait(ldriver, 30);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(commonSettingsButton));
+		((JavascriptExecutor) ldriver).executeScript("arguments[0].click();", element);
 	}
 
 	public WebElement commonSettingsTabText(int i) {
