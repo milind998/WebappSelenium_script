@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.logging.log4j.core.config.Order;
 import org.junit.runner.RunWith;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -13,7 +14,9 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
-@RunWith(Cucumber.class)				
+
+@RunWith(Cucumber.class)
+@Order(value = 0)
 @CucumberOptions(
 		monochrome = false,
 		dryRun = false,
