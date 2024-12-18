@@ -46,7 +46,7 @@ public class mainsettingsPage extends Home {
 	//=========================================COMMON SETTINGS========================================================================
 	
 	
-	@FindBy(xpath = "(//*[@class=\"MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1oqimao\"])[1]")
+	@FindBy(xpath = "//*[text()='Common']")
 	@CacheLookup
 	WebElement commonSettingsButton;
 
