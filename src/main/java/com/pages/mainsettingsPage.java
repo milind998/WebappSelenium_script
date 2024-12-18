@@ -51,7 +51,7 @@ public class mainsettingsPage extends Home {
 	WebElement commonSettingsButton;
 
 	public void commonSettings() throws InterruptedException {
-	
+		Thread.sleep(3000);	
 		commonSettingsButton.click();
 		Thread.sleep(3000);
 	}
