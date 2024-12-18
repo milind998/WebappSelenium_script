@@ -55,7 +55,7 @@ public class stepsMainSetting {
 	//=========================================COMMON SETTINGS========================================================================
 
 	@Given("Click on common Settings tab")
-	public void click_on_common_settings_tab() {
+	public void click_on_common_settings_tab() throws InterruptedException {
 		kk.commonSettings();
 	}
 

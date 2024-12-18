@@ -50,7 +50,8 @@ public class mainsettingsPage extends Home {
 	@CacheLookup
 	WebElement commonSettingsButton;
 
-	public void commonSettings() {
+	public void commonSettings() throws InterruptedException {
+		Thread.sleep(2000);
 		commonSettingsButton.click();
 	}
 

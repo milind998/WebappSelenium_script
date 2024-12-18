@@ -19,17 +19,21 @@
 
 Feature: Main Settings page
 @tag
+@1
 Scenario: Check Settings Page button title
 Given Admin Home page
 When Click on Setting page
 Then Check Page title
 
 
+@2
 Scenario: Check common Settings tab
 Given Click on common Settings tab
 Then Check All tab text
 
+
 @wait
+@3
 Scenario Outline: consumer can able to update Common Settings 
  Check Page title 
 Given Admin enter required field  "<Maximum discount allowed(In %)>","<Minimum water wallet amount>","<Water wallet recharge alert>","<Extra charges for single order>","<OTP Less Delivery Msg>","<Extra charges HSN code>", "<Extra charges CGST %>", "<Extra charges SGST %>"
@@ -47,6 +51,7 @@ Examples:
 
  
  @wait
+ @4
  Scenario: Add slots tab
  Given Click on Delivery Slots button
  When Click on Add Slots button
@@ -56,6 +61,7 @@ Examples:
 
 
 @wait
+@5
 Scenario Outline: Add delivery Slot
 Given Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
 When Click on ADD button
