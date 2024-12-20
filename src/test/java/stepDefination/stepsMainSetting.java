@@ -76,7 +76,8 @@ public class stepsMainSetting {
 	@And("Admin enter required field  {string},{string},{string},{string},{string},{string}, {string}, {string}")
 	public void admin_enter_required_field(String MaximumdiscountallowedBox, String Minimumwaterwalletamount, String Waterwalletrechargealert,
 			String Extrachargesforsingleorder, String OTPLessDeliveryMsg,
-			String ExtrachargesHSNcode, String ExtrachargesCGST, String ExtrachargesSGST) {
+			String ExtrachargesHSNcode, String ExtrachargesCGST, String ExtrachargesSGST) throws InterruptedException {
+		Thread.sleep(3000);
 		kk.MaximumdiscountallowedTextBox(MaximumdiscountallowedBox);
 		kk.MinimumwaterwalletamounttextBox(Minimumwaterwalletamount);
 		kk.WaterwalletrechargealerttextBox(Waterwalletrechargealert);
