@@ -256,7 +256,7 @@ public class mainsettingsPage extends Home {
 		NumberOfSlotsBox.sendKeys(NumberOfSlots);
 	}
 
-	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1uvydh2'])[1]")
+	@FindBy(xpath = "(//*[@placeholder=\"hh:mm\"])[1]")
 	@CacheLookup
 	WebElement DeliverySlotStartTimeBox;
 
@@ -265,7 +265,7 @@ public class mainsettingsPage extends Home {
 		DeliverySlotStartTimeBox.sendKeys(DeliverySlotStartTime);
 	}
 
-	@FindBy(xpath = "(//*[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1uvydh2'])[2]")
+	@FindBy(xpath = "(//*[@placeholder=\"hh:mm\"])[2]")
 	@CacheLookup
 	WebElement DeliverySlotEndTimeBox;
 
