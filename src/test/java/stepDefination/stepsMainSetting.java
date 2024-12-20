@@ -107,7 +107,8 @@ public class stepsMainSetting {
 	//	}
 
 	@When("Click on update button")
-	public void click_on_update_button() {
+	public void click_on_update_button() throws InterruptedException {
+		Thread.sleep(3000);
 		kk.clickUpdateButton();
 	}
 
