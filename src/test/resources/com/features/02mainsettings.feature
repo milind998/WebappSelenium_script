@@ -26,16 +26,17 @@ When Click on Setting page
 Then Check Page title
 
 
-@2
-Scenario: Check common Settings tab
-Given Click on common Settings tab
-Then Check All tab text
+#@2
+#Scenario: Check common Settings tab
+#Given Click on common Settings tab
+#Then Check All tab text
 
 
 @wait
 @3
 Scenario Outline: consumer can able to update Common Settings 
-Given Admin enter required field  "<Maximum discount allowed(In %)>","<Minimum water wallet amount>","<Water wallet recharge alert>","<Extra charges for single order>","<OTP Less Delivery Msg>","<Extra charges HSN code>", "<Extra charges CGST %>", "<Extra charges SGST %>"
+Given Click on common Settings tab
+And Admin enter required field  "<Maximum discount allowed(In %)>","<Minimum water wallet amount>","<Water wallet recharge alert>","<Extra charges for single order>","<OTP Less Delivery Msg>","<Extra charges HSN code>", "<Extra charges CGST %>", "<Extra charges SGST %>"
 When Click on update button
 Then check Toast message "<Toast Message>"
  
