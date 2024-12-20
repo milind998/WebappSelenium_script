@@ -146,8 +146,9 @@ public class stepsMainSetting {
 
 
 	@When("Click on Add Slots button")
-	public void click_on_add_slots_button() {
+	public void click_on_add_slots_button() throws InterruptedException {
 		kk.AddSlotsTab();
+		Thread.sleep(2000);
 	}
 
 	@When("Add Slots tab text1")
