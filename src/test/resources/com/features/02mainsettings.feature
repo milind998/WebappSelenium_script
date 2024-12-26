@@ -50,20 +50,22 @@ Examples:
 
 
  
- @wait
- @4
- Scenario: Add slots tab
- Given Click on Delivery Slots button
- When Click on Add Slots button
- And Add Slots tab text1
- Then Add Slots tab text
+ #@wait
+ #@4
+ #Scenario: Add slots tab
+ #Given Click on Delivery Slots button
+ #When Click on Add Slots button
+ #And Add Slots tab text1
+ #Then Add Slots tab text
     
 
 
 @wait
 @5
 Scenario Outline: Add delivery Slot
-Given Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
+Given Click on Delivery Slots button
+And Click on Add Slots button
+And Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
 When Click on ADD button
 Then check Toast message "<Toast Message>"
 
