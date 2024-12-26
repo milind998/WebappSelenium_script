@@ -261,7 +261,8 @@ public class mainsettingsPage extends Home {
 	@CacheLookup
 	WebElement DeliverySlotStartTimeBox;
 
-	public void DeliverySlotStartTimeTextBox(String DeliverySlotStartTime) {
+	public void DeliverySlotStartTimeTextBox(String DeliverySlotStartTime) throws InterruptedException {
+		Thread.sleep(4000);
 		WebElement ClickOnStart = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[1]"));
 		ClickOnStart.click();
 		DeliverySlotStartTimeBox.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
@@ -272,7 +273,8 @@ public class mainsettingsPage extends Home {
 	@CacheLookup
 	WebElement DeliverySlotEndTimeBox;
 
-	public void DeliverySlotEndTimeTextBox(String DeliverySlotEndTime) {
+	public void DeliverySlotEndTimeTextBox(String DeliverySlotEndTime) throws InterruptedException {
+		Thread.sleep(4000);
 		WebElement ClickOnEnd = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[2]"));
 		ClickOnEnd.click();
 		DeliverySlotEndTimeBox.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
