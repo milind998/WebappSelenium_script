@@ -172,7 +172,7 @@ public class stepsMainSetting {
 	}
 
 	@Given("Admin fill data in textboxes {string}, {string}, {string}")
-	public void admin_fill_data_in_textboxes(String NumberOfSlots, String DeliverySlotStartTime, String DeliverySlotEndTime) {
+	public void admin_fill_data_in_textboxes(String NumberOfSlots, String DeliverySlotStartTime, String DeliverySlotEndTime) throws InterruptedException {
 		kk.NumberOfSlotsTextBox(NumberOfSlots);
 		kk.DeliverySlotStartTimeTextBox(DeliverySlotStartTime);
 		kk.DeliverySlotEndTimeTextBox(DeliverySlotEndTime);
@@ -184,7 +184,7 @@ public class stepsMainSetting {
 	}
 
 	@Given("Admin add slots with fill textboxes {string}, {string}, {string}")
-	public void admin_add_slots_with_fill_textboxes(String NumberOfSlots, String DeliverySlotStartTime, String DeliverySlotEndTime) {
+	public void admin_add_slots_with_fill_textboxes(String NumberOfSlots, String DeliverySlotStartTime, String DeliverySlotEndTime) throws InterruptedException {
 		kk.NumberOfSlotsTextBox(NumberOfSlots);
 		kk.DeliverySlotStartTimeTextBox(DeliverySlotStartTime);
 		kk.DeliverySlotEndTimeTextBox(DeliverySlotEndTime);
