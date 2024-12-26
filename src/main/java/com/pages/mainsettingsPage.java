@@ -262,7 +262,8 @@ public class mainsettingsPage extends Home {
 	WebElement DeliverySlotStartTimeBox;
 
 	public void DeliverySlotStartTimeTextBox(String DeliverySlotStartTime) {
-		DeliverySlotStartTimeBox.click();
+		WebElement ClickOnStart = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[1]"));
+		ClickOnStart.click();
 		DeliverySlotStartTimeBox.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
 		DeliverySlotStartTimeBox.sendKeys(DeliverySlotStartTime);
 	}
@@ -272,7 +273,8 @@ public class mainsettingsPage extends Home {
 	WebElement DeliverySlotEndTimeBox;
 
 	public void DeliverySlotEndTimeTextBox(String DeliverySlotEndTime) {
-		DeliverySlotEndTimeBox.click();
+		WebElement ClickOnEnd = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[2]"));
+		ClickOnEnd.click();
 		DeliverySlotEndTimeBox.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
 		DeliverySlotEndTimeBox.sendKeys(DeliverySlotEndTime);
 	}
