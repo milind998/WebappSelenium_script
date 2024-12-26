@@ -257,20 +257,22 @@ public class mainsettingsPage extends Home {
 		NumberOfSlotsBox.sendKeys(NumberOfSlots);
 	}
 
-	@FindBy(xpath = "(//*[@placeholder=\"hh:mm\"])[1]")
+	@FindBy(xpath = "//input[@placeholder='hh:mm' and @type='tel' and @id='mui-221']")
 	@CacheLookup
 	WebElement DeliverySlotStartTimeBox;
 
 	public void DeliverySlotStartTimeTextBox(String DeliverySlotStartTime) {
+		DeliverySlotStartTimeBox.click();
 		DeliverySlotStartTimeBox.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
 		DeliverySlotStartTimeBox.sendKeys(DeliverySlotStartTime);
 	}
 
-	@FindBy(xpath = "(//*[@placeholder=\"hh:mm\"])[2]")
+	@FindBy(xpath = "//input[@placeholder='hh:mm' and @type='tel' and @id='mui-222']")
 	@CacheLookup
 	WebElement DeliverySlotEndTimeBox;
 
 	public void DeliverySlotEndTimeTextBox(String DeliverySlotEndTime) {
+		DeliverySlotEndTimeBox.click();
 		DeliverySlotEndTimeBox.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
 		DeliverySlotEndTimeBox.sendKeys(DeliverySlotEndTime);
 	}
