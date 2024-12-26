@@ -108,7 +108,7 @@ public class stepsMainSetting {
 
 	@When("Click on update button")
 	public void click_on_update_button() throws InterruptedException {
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		kk.clickUpdateButton();
 	}
 
@@ -164,7 +164,7 @@ public class stepsMainSetting {
 
 	@Then("Add Slots tab text")
 	public void add_slots_tab_text() {
-		// String[] AddSlotsTab = {"Number of Slots"};
+		String[] AddSlotsTab = {"Number of Slots"};
 		String actResult = kk.AddSlotsTabText().getText();
 		System.out.println(actResult);
 		String expResult = "Number of Slots";

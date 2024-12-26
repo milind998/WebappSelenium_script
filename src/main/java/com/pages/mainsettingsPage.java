@@ -53,7 +53,7 @@ public class mainsettingsPage extends Home {
 	public void commonSettings() throws InterruptedException {
 //		Thread.sleep(5000);	
 //		commonSettingsButton.click();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(ldriver, 30);
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(commonSettingsButton));
 		((JavascriptExecutor) ldriver).executeScript("arguments[0].click();", element);
@@ -257,26 +257,26 @@ public class mainsettingsPage extends Home {
 		NumberOfSlotsBox.sendKeys(NumberOfSlots);
 	}
 
-	@FindBy(xpath = "//input[@placeholder='hh:mm' and @type='tel' and @id='mui-221']")
+	@FindBy(xpath = "(//*[@placeholder='hh:mm' and @type='tel'])[1]")
 	@CacheLookup
 	WebElement DeliverySlotStartTimeBox;
 
 	public void DeliverySlotStartTimeTextBox(String DeliverySlotStartTime) throws InterruptedException {
-		Thread.sleep(4000);
-		WebElement ClickOnStart = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[1]"));
-		ClickOnStart.click();
+		//Thread.sleep(4000);
+		//WebElement ClickOnStart = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[1]"));
+		//ClickOnStart.click();
 		DeliverySlotStartTimeBox.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
 		DeliverySlotStartTimeBox.sendKeys(DeliverySlotStartTime);
 	}
 
-	@FindBy(xpath = "//input[@placeholder='hh:mm' and @type='tel' and @id='mui-222']")
+	@FindBy(xpath = "(//*[@placeholder='hh:mm' and @type='tel'])[2]")
 	@CacheLookup
 	WebElement DeliverySlotEndTimeBox;
 
 	public void DeliverySlotEndTimeTextBox(String DeliverySlotEndTime) throws InterruptedException {
-		Thread.sleep(4000);
-		WebElement ClickOnEnd = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[2]"));
-		ClickOnEnd.click();
+//		Thread.sleep(4000);
+//		WebElement ClickOnEnd = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[2]"));
+//		ClickOnEnd.click();
 		DeliverySlotEndTimeBox.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
 		DeliverySlotEndTimeBox.sendKeys(DeliverySlotEndTime);
 	}

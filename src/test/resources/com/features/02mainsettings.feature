@@ -26,16 +26,16 @@ When Click on Setting page
 Then Check Page title
 
 
-#@2
-#Scenario: Check common Settings tab
-#Given Click on common Settings tab
-#Then Check All tab text
+@2
+Scenario: Check common Settings tab
+Given Click on common Settings tab
+Then Check All tab text
 
 
 @wait
 @3
 Scenario Outline: consumer can able to update Common Settings 
-Given Click on common Settings tab
+
 And Admin enter required field  "<Maximum discount allowed(In %)>","<Minimum water wallet amount>","<Water wallet recharge alert>","<Extra charges for single order>","<OTP Less Delivery Msg>","<Extra charges HSN code>", "<Extra charges CGST %>", "<Extra charges SGST %>"
 When Click on update button
 Then check Toast message "<Toast Message>"
@@ -50,22 +50,22 @@ Examples:
 
 
  
- #@wait
- #@4
- #Scenario: Add slots tab
- #Given Click on Delivery Slots button
- #When Click on Add Slots button
- #And Add Slots tab text1
- #Then Add Slots tab text
+ @wait
+ @4
+ Scenario: Add slots tab
+ Given Click on Delivery Slots button
+ When Click on Add Slots button
+ And Add Slots tab text1
+ Then Add Slots tab text
     
 
 
 @wait
 @5
 Scenario Outline: Add delivery Slot
-Given Click on Delivery Slots button
-And Click on Add Slots button
-And Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
+#Given Click on Delivery Slots button
+#And Click on Add Slots button
+Given Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
 When Click on ADD button
 Then check Toast message "<Toast Message>"
 
