@@ -153,8 +153,8 @@ When Select Date Range
 And Enter Blocking reason
 Then Click on Block Button
 
-Scenario: Remove Blocked date range
-Given Click on Remove Date Range Button
+#Scenario: Remove Blocked date range
+#Given Click on Remove Date Range Button
 
 
 

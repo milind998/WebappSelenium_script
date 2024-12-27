@@ -396,7 +396,7 @@ public class mainsettingsPage extends Home {
 	        xpaths.add("//*[text()='Paysharp Search UPI']");
 	        xpaths.add("//*[text()='Virtual Bank']");
 	        xpaths.add("//*[text()='RazorPay']");
-	        xpaths.add("(//*[text()='Wallet'])[2]");
+	        xpaths.add("(//*[text()='Wallet'])");
 	        for (String xpath : xpaths) {
 	            try {
 	            	//Thread.sleep(1500);
