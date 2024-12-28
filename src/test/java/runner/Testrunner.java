@@ -38,30 +38,42 @@ import io.cucumber.junit.CucumberOptions;
        		        }
 		
 		 )
+
 public class Testrunner {
-	private static ExtentReports extent;
-	
-	
-	
-	 
+
+    private static ExtentReports extent;
+
+    /**
+     * Returns the singleton instance of ExtentReports.
+     * If the instance doesn't exist, it creates one.
+     *
+     * @return ExtentReports instance
+     */
     public static ExtentReports getInstance() {
         if (extent == null) {
-            createInstance();
+            extent = createInstance();
         }
         return extent;
     }
 
-    public static ExtentReports createInstance() {
-        Properties properties = new Properties();
-        try (FileInputStream fis = new FileInputStream("src/test/resources/extent.properties")) {
-            properties.load(fis);
-        } catch (IOException e) {
-            e.printStackTrace();
+    /**
+     * Creates and initializes the ExtentReports instance with reporters.
+     *
+     * @return ExtentReports instance
+     */
+    private static ExtentReports createInstance() {
+        Properties properties = loadProperties("src/test/resources/extent.properties");
+
+        if (properties == null) {
+            throw new RuntimeException("Failed to load properties file. Please check the file path and content.");
         }
 
-        String baseFolder = properties.getProperty("basefolder.name");
         String sparkReportPath = properties.getProperty("extent.reporter.spark.out");
+        if (sparkReportPath == null || sparkReportPath.isEmpty()) {
+            throw new IllegalArgumentException("Spark report path is not specified in extent.properties.");
+        }
 
+        // Initialize Spark Reporter
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(sparkReportPath);
         sparkReporter.config().setTheme(Theme.DARK);
         sparkReporter.config().setDocumentTitle("Extent Reports");
@@ -69,26 +81,91 @@ public class Testrunner {
 
         extent = new ExtentReports();
         extent.attachReporter(sparkReporter);
-        
-     // Initialize PDF Reporter
-//        String pdfReportPath = properties.getProperty("extent.reporter.pdf.out");
-//        if (pdfReportPath != null) {
-//            ExtentPdfReporter pdfReporter = new ExtentPdfReporter(pdfReportPath);
-//            extent.attachReporter(pdfReporter);
-//        }
 
-     // Initialize HTML Reporter
+        // Optional: Initialize HTML Reporter
         String htmlReportPath = properties.getProperty("extent.reporter.html.out");
-        if (htmlReportPath != null) {
+        if (htmlReportPath != null && !htmlReportPath.isEmpty()) {
             ExtentSparkReporter htmlReporter = new ExtentSparkReporter(htmlReportPath);
-            htmlReporter.config().setTheme(com.aventstack.extentreports.reporter.configuration.Theme.STANDARD);
+            htmlReporter.config().setTheme(Theme.STANDARD);
             extent.attachReporter(htmlReporter);
         }
 
-        extent.setSystemInfo("OS", properties.getProperty("systeminfo.os"));
-        extent.setSystemInfo("Version", properties.getProperty("systeminfo.version"));
+        // Add system information to the report
+        extent.setSystemInfo("OS", properties.getProperty("systeminfo.os", "Unknown OS"));
+        extent.setSystemInfo("Version", properties.getProperty("systeminfo.version", "Unknown Version"));
 
         return extent;
     }
-	
+
+    /**
+     * Loads properties from the specified file path.
+     *
+     * @param filePath Path to the properties file
+     * @return Properties object
+     */
+    private static Properties loadProperties(String filePath) {
+        Properties properties = new Properties();
+        try (FileInputStream fis = new FileInputStream(filePath)) {
+            properties.load(fis);
+        } catch (IOException e) {
+            System.err.println("Error loading properties file: " + filePath);
+            e.printStackTrace();
+            return null;
+        }
+        return properties;
+    }
 }
+//public class Testrunner {
+//	private static ExtentReports extent;
+//	
+//	
+//	
+//	 
+//    public static ExtentReports getInstance() {
+//        if (extent == null) {
+//            createInstance();
+//        }
+//        return extent;
+//    }
+//
+//    public static ExtentReports createInstance() {
+//        Properties properties = new Properties();
+//        try (FileInputStream fis = new FileInputStream("src/test/resources/extent.properties")) {
+//            properties.load(fis);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        String baseFolder = properties.getProperty("basefolder.name");
+//        String sparkReportPath = properties.getProperty("extent.reporter.spark.out");
+//
+//        ExtentSparkReporter sparkReporter = new ExtentSparkReporter(sparkReportPath);
+//        sparkReporter.config().setTheme(Theme.DARK);
+//        sparkReporter.config().setDocumentTitle("Extent Reports");
+//        sparkReporter.config().setReportName("Automation Test Results");
+//
+//        extent = new ExtentReports();
+//        extent.attachReporter(sparkReporter);
+//        
+//     // Initialize PDF Reporter
+////        String pdfReportPath = properties.getProperty("extent.reporter.pdf.out");
+////        if (pdfReportPath != null) {
+////            ExtentPdfReporter pdfReporter = new ExtentPdfReporter(pdfReportPath);
+////            extent.attachReporter(pdfReporter);
+////        }
+//
+//     // Initialize HTML Reporter
+//        String htmlReportPath = properties.getProperty("extent.reporter.html.out");
+//        if (htmlReportPath != null) {
+//            ExtentSparkReporter htmlReporter = new ExtentSparkReporter(htmlReportPath);
+//            htmlReporter.config().setTheme(com.aventstack.extentreports.reporter.configuration.Theme.STANDARD);
+//            extent.attachReporter(htmlReporter);
+//        }
+//
+//        extent.setSystemInfo("OS", properties.getProperty("systeminfo.os"));
+//        extent.setSystemInfo("Version", properties.getProperty("systeminfo.version"));
+//
+//        return extent;
+//    }
+//	
+//}
