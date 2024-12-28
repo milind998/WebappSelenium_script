@@ -25,7 +25,7 @@ Feature: Promo Code Tab
   #And Click on Promo Code Tab
   #Then Check Promo Code tab text
   
-  @tag2
+  #@tag2
   Scenario: Check Promo Code table Heading text
   Given Click on Promo Code Tab
   Then check promo code table text
