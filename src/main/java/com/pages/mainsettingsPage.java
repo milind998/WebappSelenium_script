@@ -242,9 +242,8 @@ public class mainsettingsPage extends Home {
 	}
 
 	public WebElement AddSlotsTabText1(int i) {
-		System.out.println(("//*[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1uvydh2'])[" + i + "]"));
-		WebElement AddSlotsText1 = ldriver.findElement(By.xpath(
-				"(//*[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1uvydh2'])[" + i + "]"));
+		System.out.println(("//label[contains(text(), 'Delivery Slot')])["+i+"]"));
+		WebElement AddSlotsText1 = ldriver.findElement(By.xpath("//label[contains(text(), 'Delivery Slot')])["+i+"]"));
 		return AddSlotsText1;
 	}
 
