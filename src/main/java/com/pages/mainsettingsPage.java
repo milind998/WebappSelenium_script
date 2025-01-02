@@ -29,6 +29,7 @@ public class mainsettingsPage extends Home {
 
 	public void settingLink() {
 		Actions actions = new Actions(ldriver);
+
 		actions.moveToElement(settingButton).click().build().perform();
 		settingButton.click();
 	}
