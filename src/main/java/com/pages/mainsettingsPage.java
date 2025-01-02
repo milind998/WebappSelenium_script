@@ -264,8 +264,8 @@ public class mainsettingsPage extends Home {
 
 	public void DeliverySlotStartTimeTextBox(String DeliverySlotStartTime) throws InterruptedException {
 		Thread.sleep(2000);
-		//WebElement ClickOnStart = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[1]"));
-		//ClickOnStart.click();
+		WebElement ClickOnStart = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[1]"));
+		ClickOnStart.click();
 		DeliverySlotStartTimeBox.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
 		DeliverySlotStartTimeBox.sendKeys(DeliverySlotStartTime);
 	}
@@ -276,8 +276,8 @@ public class mainsettingsPage extends Home {
 
 	public void DeliverySlotEndTimeTextBox(String DeliverySlotEndTime) throws InterruptedException {
 		Thread.sleep(2000);
-//		WebElement ClickOnEnd = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[2]"));
-//		ClickOnEnd.click();
+		WebElement ClickOnEnd = ldriver.findElement(By.xpath("(//*[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1bn53lx'])[2]"));
+		ClickOnEnd.click();
 		DeliverySlotEndTimeBox.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
 		DeliverySlotEndTimeBox.sendKeys(DeliverySlotEndTime);
 	}
