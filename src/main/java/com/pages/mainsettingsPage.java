@@ -349,8 +349,9 @@ public class mainsettingsPage extends Home {
             radioButton.click();
             
             WebElement updateButton = ldriver.findElement(By.xpath("(//*[text()='Update'])[2]"));
-            updateButton.click();
             Thread.sleep(3000);
+            updateButton.click();
+           
         }
     }
 	
