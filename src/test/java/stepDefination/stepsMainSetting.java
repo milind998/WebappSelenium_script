@@ -133,8 +133,10 @@ public class stepsMainSetting {
 
 
 	@Given("Click on Delivery Slots button")
-	public void click_on_delivery_slots_button() {
+	public void click_on_delivery_slots_button() throws InterruptedException {
+		
 		kk.DeliverySlotsTab();
+		Thread.sleep(1000);
 	}
 
 
