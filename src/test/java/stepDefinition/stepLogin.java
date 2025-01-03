@@ -27,7 +27,7 @@ public class stepLogin {
 		driver.navigate().to("https://loginstage.bookwater.com/authenticate");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();*/
-			String userDirectory = System.getProperty("user.home");
+			String userDirectory = System.getProperty("user.dir");
 		    
 		    // Detect OS to set the correct ChromeDriver path
 		    String chromeDriverPath;
@@ -56,7 +56,7 @@ public class stepLogin {
 		    lp = new Loginpage(driver);
 		    
 		    driver.get("https://loginstage.bookwater.com/authenticate");
-		    
+		    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		    // Maximize current window
 		    driver.manage().window().maximize();
 			

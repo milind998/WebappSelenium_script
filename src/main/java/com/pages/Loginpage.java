@@ -40,7 +40,7 @@ public class Loginpage {
 	@FindBy (xpath = "(//*[text()='Dashboard'])[1]")
 	@CacheLookup
 	WebElement txtHome;
-	public String homePage () {
+	public String homePage() {
 		String pagename = txtHome.getText();
 		return pagename;
 	}

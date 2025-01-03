@@ -36,6 +36,8 @@ public class UsersPage extends Reports {
 		WebElement users = ldriver.findElement(By.xpath("(//*[@class='MuiTypography-root MuiTypography-body1 css-12zoz4r'])[4]"));
 
 		users.click();
+		ldriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 	}
 
 	public void spinnerwaits() {
