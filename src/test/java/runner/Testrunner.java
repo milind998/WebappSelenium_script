@@ -25,11 +25,7 @@ import io.cucumber.junit.CucumberOptions;
 		monochrome = false,
 		dryRun = false,
 		features={"src/test/resources/com/features/01homePage.feature",
-<<<<<<< HEAD
 				 //"src/test/resources/com/features/02mainsettings.feature",
-=======
-				 "src/test/resources/com/features/02mainsettings.feature",
->>>>>>> 8f5ab3f121caea858f66242f71c3e4071c0d1479
 				 //"src/test/resources/com/features/03promoCode.feature",
 				 //"src/test/resources/com/features/04transactions.feature",
 				 //"src/test/resources/com/features/05SuperAdmin.feature",
