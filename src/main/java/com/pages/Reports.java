@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
 
-public class Reports extends InfluencerPage {
+public class Reports extends UsersPage {
 
    
 	public Reports(WebDriver ldriver) {

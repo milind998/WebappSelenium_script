@@ -24,7 +24,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.After;
 
-public class InfluencerPage extends Loginpage{
+public class InfluencerPage extends Reports{
   
 	
 	public InfluencerPage(WebDriver rdriver) {

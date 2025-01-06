@@ -24,7 +24,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class UsersPage extends Reports {
+public class UsersPage extends SKU {
 
 	public UsersPage(WebDriver ldriver) {
 		super(ldriver);
