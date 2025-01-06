@@ -68,6 +68,7 @@ public class Testrunner {
         }
 
         String baseFolder = properties.getProperty("basefolder.name");
+        
         String sparkReportPath = properties.getProperty("extent.reporter.spark.out");
 
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(sparkReportPath);
