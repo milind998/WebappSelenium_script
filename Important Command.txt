@@ -1,0 +1,19 @@
+Important Command
+
+allure generate -o allure-report --clean
+
+ 
+allure open allure-report
+
+
+
+
+
+
+EC18679
+
+1] Password should not show on gift card
+2] Sent 
+3] text should be same ON GIFT CARD DETAILS
+4] AI generation gift card, customized gift card
+4] After purchased billl

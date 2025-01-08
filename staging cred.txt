@@ -1,0 +1,174 @@
+staging cred:
+============
+Super Admin
+ 
+noormohamed.a@bookwater.com
+#King007
+ 
+ 
+Admin cred:
+dinesh@bookwater.com
+#King008
+ 
+ 
+production cred:
+================
+ 
+milind.ingale@bookwater.com
+#BookwaterAdmin009
+
+ 
+pcloudy:
+=============
+bharath@bookwater.com
+QJYWyD@QvS5GsMk
+ 
+[Distributor - DK - 7358594830 
+Vasa - 9042660202 ----------------Pass->#Vasanth007
+Distributor - Valen D - 9047905733 -- Pass - #Noor123]
+ 
+1] Kannan(6380150586) refer - Gowtham Prasath - Consumer - Mo Nu. - , ----> Pass.-> #King008 --> Milind Ingale- milindingle998@gmail.com---9146939608
+ 
+3] testdist@dist.com/8248991401 - pass - Test@1234
+ 
+Influencer  -  Kamal - 7358356810 ---Refer-> Lebansty V- 9047905733 ->
+ 
+New Wfs     - rahul.manekar@bookwater.com , Dq/ksxXlyX     number - 7499839920 #Rahul123
+ 
+ 
+BW-sales head
+Email: salesHead@bookwater.com
+password: 9N/rN1pMKr
+Phone: 9003806500
+Name:Sales Head
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BW-CS
+Email:customersupport@bookwater.com
+password: gY9ZNlTM4C
+Phone: 9003806501
+Name:CS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BW-CSHEAD
+Email: customersupporthead@bookwater.com
+password: gzLuUMpet6
+Phone: 9003806501
+Name:BW CSHEAD
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BW-SALES
+Email: sales@bookwater.com
+password: z+Y89GeWBf
+Phone: 9003806503
+Name:BW SALES
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BW-ops
+Email: Ops@bookwater.com
+password: 8kvn1lBqWT
+Phone: 9003806504
+Name:BW OPS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BW-OPS HEAD
+Email:OpsHead1@bookwater.com
+password:W/LJq8SU5S
+Phone: 9003806506
+Name:BW OPSHEAD
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BW-Finance
+Email:finance@bookwater.com
+password:2ZeUFF1ELq
+Phone: 9003806507
+Name:BW Finance
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BW-Finance Head
+Email:financeHead@bookwater.com
+password:Q035+/YAVr
+Phone: 9003806508
+Name:BW Finance Head
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BW-QA
+Email:qa@bookwater.com
+password:z6I3Vr5MBG
+Phone: 9003806509 
+Name:BW QA
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BW-QA HEAD
+Email:qaHead@bookwater.com
+password:z9mV4+t426
+Phone: 9003806400 
+Name:BW QA HEAD
+ 
+ 
+BW-CS Lead
+Name:- Customer support lead
+Email:-customersupportlead@bookwater.com
+Password:- YgRXd5A1DO
+Phone:-8007474888
+ 
+-----------------------------------------
+Testing CS Head
+ 
+ 
+ 
+Id - milind.ingale@bookwater.com
+Pass - 8n/Xj054ro
+ 
+ 
+===============================================================================================
+ 
+Test login credentials: test@bookwater.com
+Test login password: #King007
+Link: paasstage.bookwater.com
