@@ -101,7 +101,7 @@ public class stepsTransactions {
 	}
 
 	@Then("Check All Payment Status {string}, {string}, {string}, {string}")
-	public void check_all_payment_status(String string, String string2, String string3, String string4) {
+	public void check_all_payment_status(String string, String string2, String string3, String string4) throws InterruptedException {
 		List<String> stringList = new ArrayList<>();
 		stringList.add(string);
 		stringList.add(string2);

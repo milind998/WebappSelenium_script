@@ -102,7 +102,7 @@ public class Transactions extends promoCode{
 		PaymentStatus_Combobox.click();
 	}
 	
-	public List <String> Check_PaymentStatusText() {
+	public List <String> Check_PaymentStatusText() throws InterruptedException {
 		List <String> PaymentStatus = new ArrayList<>();
 		for(int i=0; i<=3; i++) {
 			if(i==0) {
@@ -116,6 +116,7 @@ public class Transactions extends promoCode{
 				System.out.println(Others);
 			}
 		}
+		Thread.sleep(1000);
 		return PaymentStatus;
 }
 	
