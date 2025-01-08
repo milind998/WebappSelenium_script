@@ -578,14 +578,17 @@ public class SuperAdmin extends Transactions{
 	@FindBy(xpath="(//*[text()='view Details'])[1]")
 	@CacheLookup
 	WebElement View_Details;
-	public void Click_ON_View_Details() {
+	public void Click_ON_View_Details() throws InterruptedException {
 		View_Details.click();
+		Thread.sleep(1000);
 	}
 	
 	
-	public void Delete_User() {
+	public void Delete_User() throws InterruptedException {
 		WebElement Delete_Button = ldriver.findElement(By.xpath("//*[text()='Delete User']"));
 		Delete_Button.click();
+		Thread.sleep(2000);
+
 	}
 	
 	public void Confirm_DeleteUser() {

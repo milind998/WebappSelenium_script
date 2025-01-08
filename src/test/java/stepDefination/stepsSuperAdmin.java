@@ -412,12 +412,12 @@ public class stepsSuperAdmin {
 	}
 
 	@When("Click on View Details button")
-	public void click_on_view_details_button() {
+	public void click_on_view_details_button() throws InterruptedException {
 	    SupA.Click_ON_View_Details();
 	}
 
 	@When("Click on Delete Button")
-	public void click_on_delete_button() {
+	public void click_on_delete_button() throws InterruptedException {
 	    SupA.Delete_User();
 	}
 	
