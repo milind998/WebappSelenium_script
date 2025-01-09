@@ -69,7 +69,7 @@ public class stepsTransactions {
 	}
 
 	@Given("Click on Payment Methods Combobox")
-	public void click_on_payment_methods_combobox() {
+	public void click_on_payment_methods_combobox() throws InterruptedException {
 		trns.Click_On_PaymentMethods_Combobox();
 	}
 
@@ -96,7 +96,7 @@ public class stepsTransactions {
 	}
 
 	@Given("Click on Payment Status Combobox")
-	public void click_on_payment_status_combobox() {
+	public void click_on_payment_status_combobox() throws InterruptedException {
 		trns.Click_On_PaymentStatus_Combobox();
 	}
 
@@ -391,13 +391,13 @@ public class stepsTransactions {
 	}
 
 	@When("Select Razorpay Payment method")
-	public void select_razorpay_payment_method() {
+	public void select_razorpay_payment_method() throws InterruptedException {
 	    trns.Click_On_PaymentMethods_Combobox();
 	    trns.Select_RazorpayMethod();
 	}
 
 	@When("Select Success payment status")
-	public void select_success_payment_status() {
+	public void select_success_payment_status() throws InterruptedException {
 		trns.Click_On_PaymentStatus_Combobox();
 		trns.Select_Success_PaymentStatus();
 	}
@@ -412,14 +412,14 @@ public class stepsTransactions {
 	
 	
 	@When("Select Failed payment status")
-	public void select_failed_payment_status() {
+	public void select_failed_payment_status() throws InterruptedException {
 		trns.Click_On_PaymentStatus_Combobox();
 		trns.Select_Failed_PaymentStatus();
 	}
 
 	
 	@Given("Select Refund payment status")
-	public void select_refund_payment_status() {
+	public void select_refund_payment_status() throws InterruptedException {
 		trns.Click_On_PaymentStatus_Combobox();
 		trns.Select_Refund_PaymentStatus();
 

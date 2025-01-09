@@ -69,9 +69,10 @@ public class Transactions extends promoCode{
 		One_TransactionType.click();
 	}
 	
-	public void Click_On_PaymentMethods_Combobox() {
+	public void Click_On_PaymentMethods_Combobox() throws InterruptedException {
 		WebElement PaymentMethods_Combobox = ldriver.findElement(By.xpath("(//*[@class=\"MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input MuiInputBase-inputSizeSmall css-qq14pi\"])[2]"));
 		PaymentMethods_Combobox.click();
+		Thread.sleep(2000);
 	}
 	
 	public List <String> Check_PaymentMethodsText() {
@@ -97,9 +98,10 @@ public class Transactions extends promoCode{
 	}
 	
 	
-	public void Click_On_PaymentStatus_Combobox() {
+	public void Click_On_PaymentStatus_Combobox() throws InterruptedException {
 		WebElement PaymentStatus_Combobox = ldriver.findElement(By.xpath("(//*[@class=\"MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input MuiInputBase-inputSizeSmall css-qq14pi\"])[3]"));
 		PaymentStatus_Combobox.click();
+		Thread.sleep(2000);
 	}
 	
 	public List <String> Check_PaymentStatusText() throws InterruptedException {
