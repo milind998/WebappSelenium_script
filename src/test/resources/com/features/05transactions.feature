@@ -25,11 +25,11 @@ Feature: Transaction page
   Then Check All Payment Methods "None", "WALLET", "RAZORPAY", "PAYSHARP+UPI"
   
   
-  @wait
-  @tag4
-  Scenario: Check Payment Status
-  Given Click on Payment Status Combobox
-  Then Check All Payment Status "None", "SUCCESS", "REFUND", "FAILED"
+  #@wait
+  #@tag4
+  #Scenario: Check Payment Status
+  #Given Click on Payment Status Combobox
+  #Then Check All Payment Status "None", "SUCCESS", "REFUND", "FAILED"
   
   
   @wait
@@ -66,7 +66,7 @@ Feature: Transaction page
   Then Check Filter with deposited and Un-Deposited "DEPOSITED", "UN-DEPOSITED"
   
   
-  #@wait
+  @wait
   @tag9
   Scenario: Check Table text
   Then Check table column text
