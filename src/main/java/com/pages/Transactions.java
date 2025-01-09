@@ -325,10 +325,11 @@ public class Transactions extends promoCode{
 	@CacheLookup
 	WebElement Click_UserNumber;
 	public void Enter_OrderID() throws InterruptedException {
-		Thread.sleep(1000);
+		
 		Click_UserNumber.click();
 		Click_UserNumber.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
 		Click_UserNumber.sendKeys("BTORD-38634");
+		Thread.sleep(2000);
 	}
 	
 	

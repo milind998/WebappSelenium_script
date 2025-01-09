@@ -313,6 +313,7 @@ public class stepsTransactions {
 	public void select_order_id_search_type() throws InterruptedException {
 		trns.Click_On_SearchTypes_Combobox();
 		trns.Select_OrderID_SearchType();
+		Thread.sleep(1000);
 	}
 
 	@When("Enter Order ID")
@@ -322,7 +323,7 @@ public class stepsTransactions {
 
 	@Then("Verify same order id")
 	public void verify_same_order_id() throws InterruptedException {
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String actResult = trns.Check_Verified_OrderID();
 		System.out.println(actResult);
 		String expResult = "BTORD-38634";
