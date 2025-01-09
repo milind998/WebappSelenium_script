@@ -128,9 +128,10 @@ public class Transactions extends promoCode{
 	}
 	
 	
-	public void Click_On_SearchTypes_Combobox() {
+	public void Click_On_SearchTypes_Combobox() throws InterruptedException {
 		WebElement SearchTypes_Combobox = ldriver.findElement(By.xpath("//*[text()='Phone/Email']"));
 		SearchTypes_Combobox.click();
+		Thread.sleep(2000);
 	}
 	
 	public List <String> Check_SearchTypesText() {
@@ -161,10 +162,11 @@ public class Transactions extends promoCode{
 		WaterDrops_TransactionType.click();
 	}
 	
-	public void Select_PaymentStatus_Box() {
+	public void Select_PaymentStatus_Box() throws InterruptedException {
 		WebElement PaymentStatus_Box = ldriver.findElement(By.xpath("//div[contains(text(),'None')]"));
 		PaymentStatus_Box.click();
-	}
+		Thread.sleep(2000);
+		}
 	
 	
 	public List<String> Check_PaymentStatus_Of_WaterDrops() {
@@ -230,7 +232,7 @@ public class Transactions extends promoCode{
 	public void Select_DepositsCombobox() throws InterruptedException {
 		WebElement DepositsCombobox = ldriver.findElement(By.xpath("(//*[@class=\"MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input MuiInputBase-inputSizeSmall css-qq14pi\"])[3]"));
 		DepositsCombobox.click();
-		Thread.sleep(1500);
+		Thread.sleep(2000);
 	}
 	
 	

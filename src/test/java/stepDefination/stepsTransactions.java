@@ -123,7 +123,7 @@ public class stepsTransactions {
 
 
 	@Given("Click on Search Type Combobox")
-	public void click_on_search_type_combobox() {
+	public void click_on_search_type_combobox() throws InterruptedException {
 		trns.Click_On_SearchTypes_Combobox();
 	}
 
@@ -155,7 +155,7 @@ public class stepsTransactions {
 	}
 
 	@When("Click on Payment Status box")
-	public void click_on_payment_status_box() {
+	public void click_on_payment_status_box() throws InterruptedException {
 		trns.Select_PaymentStatus_Box();
 	}
 
@@ -310,7 +310,7 @@ public class stepsTransactions {
 	}
 
 	@When("Select Order ID search type")
-	public void select_order_id_search_type() {
+	public void select_order_id_search_type() throws InterruptedException {
 		trns.Click_On_SearchTypes_Combobox();
 		trns.Select_OrderID_SearchType();
 	}
