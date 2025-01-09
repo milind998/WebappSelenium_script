@@ -18,18 +18,18 @@ Feature: Transaction page
   Then Check All Transaction type "ORDERS", "WATER-DROPS", "DEPOSIT", "WALLET"
   
   
-  @wait
-  @tag3
-  Scenario: Check Payment Methods
-  Given Click on Payment Methods Combobox
-  Then Check All Payment Methods "None", "WALLET", "RAZORPAY", "PAYSHARP+UPI"
-  
-  
   #@wait
-  #@tag4
-  #Scenario: Check Payment Status
-  #Given Click on Payment Status Combobox
-  #Then Check All Payment Status "None", "SUCCESS", "REFUND", "FAILED"
+  #@tag3
+  #Scenario: Check Payment Methods
+  #Given Click on Payment Methods Combobox
+  #Then Check All Payment Methods "None", "WALLET", "RAZORPAY", "PAYSHARP+UPI"
+  
+  
+  @wait
+  @tag4
+  Scenario: Check Payment Status
+  Given Click on Payment Status Combobox
+  Then Check All Payment Status "None", "SUCCESS", "REFUND", "FAILED"
   
   
   @wait
