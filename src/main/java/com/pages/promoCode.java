@@ -109,8 +109,14 @@ public class promoCode extends mainsettingsPage {
 
 
 	public void Select_SingleUse_PromoCode_Type() throws InterruptedException {
-		WebElement SingleUse_PromoCode_Type = ldriver.findElement(By.xpath("//*[text()='Single use promo codes']"));
+		try {
+		WebElement SingleUse_PromoCode_Type = ldriver.findElement(By.xpath("(//*[text()='Single use promo codes'])[1]"));
 		SingleUse_PromoCode_Type.click();
+		}
+		catch(Exception e) {
+			WebElement SingleUse_PromoCode_Type = ldriver.findElement(By.xpath("(//*[text()='Single use promo codes'])[2]"));
+			SingleUse_PromoCode_Type.click();
+		}
 	}
 
 
@@ -119,10 +125,17 @@ public class promoCode extends mainsettingsPage {
 		PromoOffer_Type.click();
 	}
 
+	
 
 	public void Select_CashBackWaterDrop_PromoOffer_Type() {
-		WebElement CashBackWaterDrop_PromoOffer_Type = ldriver.findElement(By.xpath("//*[text()='cashback water drops']"));
+		try {
+		WebElement CashBackWaterDrop_PromoOffer_Type = ldriver.findElement(By.xpath("(//*[text()='cashback water drops'])[1]"));
 		CashBackWaterDrop_PromoOffer_Type.click();
+		}
+		catch(Exception e) {
+			WebElement CashBackWaterDrop_PromoOffer_Type = ldriver.findElement(By.xpath("(//*[text()='cashback water drops'])[2]"));
+			CashBackWaterDrop_PromoOffer_Type.click();
+		}
 	}
 
 	public void Select_PercentageDiscount_PromoOffer_Type() {

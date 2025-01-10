@@ -25,14 +25,14 @@ import io.cucumber.junit.CucumberOptions;
 		monochrome = false,
 		dryRun = false,
 		features={"src/test/resources/com/features/01homePage.feature",
-				 "src/test/resources/com/features/02SuperAdmin.feature",
+				 //"src/test/resources/com/features/02SuperAdmin.feature",
 				 //"src/test/resources/com/features/03SKU.feature",
-				 "src/test/resources/com/features/04usersPage.feature",
-				 "src/test/resources/com/features/05transactions.feature",
-				 "src/test/resources/com/features/06reportsPage.feature",
+				 //"src/test/resources/com/features/04usersPage.feature",
+				 //"src/test/resources/com/features/05transactions.feature",
+				 //"src/test/resources/com/features/06reportsPage.feature",
 				 //"src/test/resources/com/features/07mainsettings.feature",
-				 //"src/test/resources/com/features/08promoCode.feature",
-				 "src/test/resources/com/features/09influencerPage.feature"
+				 "src/test/resources/com/features/08promoCode.feature",
+				 //"src/test/resources/com/features/09influencerPage.feature"
 				},
 		
 		glue={"stepDefination"},

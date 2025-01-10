@@ -43,7 +43,8 @@ public class stepsPromoCode {
 
 	@Given("Click on Next Page button")
 	public void click_on_next_page_button() throws InterruptedException {
-	    mm.checkNextButtonCountAndEnabled();
+	    Thread.sleep(3000);
+		mm.checkNextButtonCountAndEnabled();
 	}
 
 	@Then("Verify last Page text")

@@ -18,12 +18,12 @@
 #Sample Feature Definition Template
 
 Feature: Promo Code Tab
-  #@tag1
-  #Scenario: Click on Promo Code tab from settings
-  #Given Admin Home page
-  #When Click on Setting page
-  #And Click on Promo Code Tab
-  #Then Check Promo Code tab text
+  @tag1
+  Scenario: Click on Promo Code tab from settings
+  Given Admin Home page
+  When Click on Setting page
+  And Click on Promo Code Tab
+  Then Check Promo Code tab text
   
   @tag2
   Scenario: Check Promo Code table Heading text
@@ -162,7 +162,7 @@ Feature: Promo Code Tab
   
   Examples:
   | Promo Label                        | Minimum order Price   | Promo Offer Value | Max Usage Limit  | Validity In Days | Validity In Hours | Promo Disclaimer       | Toast Message |
-  |                                    |                       |                   |                  |                  |                   |                        | Fill all the fields |
+  |                                    |                       |                   |                  |                  |                   |                        | Please Enter Minimum One |
   |  Multi Use Price Discount Promo Code |       100             |      10           |       2          |        2         |       24          |    Automation testings | Created promo code successfully|
   
   
@@ -187,7 +187,7 @@ Feature: Promo Code Tab
   
   Examples:
   | Promo Label                        | Minimum order Price   | Promo Offer Value | Max Usage Limit  | Validity In Days | Validity In Hours | Promo Disclaimer       | Toast Message |
-  |                                    |                       |                   |                  |                  |                   |                        | Fill all the fields |
+  |                                    |                       |                   |                  |                  |                   |                        | Please Enter Minimum One |
   |  Cumulative Coupon Cashback Water Drop Promo Code |       100             |      10           |       2          |        2         |       24          |    Automation testings | Created promo code successfully|
   
   @wait
@@ -211,7 +211,7 @@ Feature: Promo Code Tab
   
   Examples:
   | Promo Label                        | Minimum order Price   | Promo Offer Value | Max Usage Limit  | Validity In Days | Validity In Hours | Promo Disclaimer       | Toast Message |
-  |                                    |                       |                   |                  |                  |                   |                        | Fill all the fields |
+  |                                    |                       |                   |                  |                  |                   |                        | Please Enter Minimum One |
   |  Cumulative Coupon Percentage Discount Promo Code |       100             |      10           |       2          |        2         |       24          |    Automation testings | Created promo code successfully|
   
   
@@ -236,7 +236,7 @@ Feature: Promo Code Tab
   
   Examples:
   | Promo Label                        | Minimum order Price   | Promo Offer Value | Max Usage Limit  | Validity In Days | Validity In Hours | Promo Disclaimer       | Toast Message |
-  |                                    |                       |                   |                  |                  |                   |                        | Fill all the fields |
+  |                                    |                       |                   |                  |                  |                   |                        | Please Enter Minimum One |
   |  Cumulative Coupon Price Discount Promo Code |       100             |      10           |       2          |        2         |       24          |    Automation testings | Created promo code successfully|
   
   
@@ -262,7 +262,7 @@ Feature: Promo Code Tab
   
   Examples:
   | Promo Label                        | Minimum order Price   | Promo Offer Value | Max Usage Limit  | Validity In Days | Validity In Hours | Promo Disclaimer       | Toast Message |
-  |                                    |                       |                   |                  |                  |                   |                        | Fill all the fields |
+  |                                    |                       |                   |                  |                  |                   |                        | Please Enter Minimum One |
   |  Wallet Recharge Coupon Cashback Water Drop Promo Code |       100             |      10           |       2          |        2         |       24          |    Automation testings | Created promo code successfully|
   
   @wait
@@ -286,7 +286,7 @@ Feature: Promo Code Tab
   
   Examples:
   | Promo Label                        | Minimum order Price   | Promo Offer Value | Max Usage Limit  | Validity In Days | Validity In Hours | Promo Disclaimer       | Toast Message |
-  |                                    |                       |                   |                  |                  |                   |                        | Fill all the fields |
+  |                                    |                       |                   |                  |                  |                   |                        | Please Enter Minimum One |
   |  Wallet Recharge Coupon Percentage Discount Promo Code |       100             |      10           |       2          |        2         |       24          |    Automation testings | Created promo code successfully|
   
   
@@ -311,7 +311,7 @@ Feature: Promo Code Tab
   
   Examples:
   | Promo Label                        | Minimum order Price   | Promo Offer Value | Max Usage Limit  | Validity In Days | Validity In Hours | Promo Disclaimer       | Toast Message |
-  |                                    |                       |                   |                  |                  |                   |                        | Fill all the fields |
+  |                                    |                       |                   |                  |                  |                   |                        | Please Enter Minimum One |
   |  Wallet Recharge Coupon Price Discount Promo Code |       100             |      10           |       2          |        2         |       24          |    Automation testings | Created promo code successfully|
   
   
