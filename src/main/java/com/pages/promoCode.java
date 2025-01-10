@@ -219,7 +219,7 @@ public class promoCode extends mainsettingsPage {
 			
 		}
 		
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 	}
 	
 	@FindBy(xpath="(//*[@class='MuiTableRow-root css-1gqqc9w'])[1]")
