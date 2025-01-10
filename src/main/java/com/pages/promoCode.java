@@ -204,11 +204,12 @@ public class promoCode extends mainsettingsPage {
 
 	public void Click_Add_Button() throws InterruptedException {
 		Add_Button.click();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 	}
 	
 
 	public void Click_On_CloseButton() throws InterruptedException {
+		
 		try {
 		    WebElement button = ldriver.findElement(By.xpath("//*[text()='close']"));
 		            button.click();
@@ -218,6 +219,7 @@ public class promoCode extends mainsettingsPage {
 			
 		}
 		
+		Thread.sleep(2000);
 	}
 	
 	@FindBy(xpath="(//*[@class='MuiTableRow-root css-1gqqc9w'])[1]")
