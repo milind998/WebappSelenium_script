@@ -203,8 +203,8 @@ public class promoCode extends mainsettingsPage {
 	WebElement Add_Button;
 
 	public void Click_Add_Button() throws InterruptedException {
-		Thread.sleep(2000);
 		Add_Button.click();
+		Thread.sleep(2000);
 	}
 	
 
