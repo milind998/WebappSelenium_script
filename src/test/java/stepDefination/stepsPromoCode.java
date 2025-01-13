@@ -5,6 +5,7 @@ package stepDefination;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
+import com.pages.Home;
 import com.pages.mainsettingsPage;
 import com.pages.promoCode;
 
@@ -14,7 +15,7 @@ import io.cucumber.java.en.When;
 
 public class stepsPromoCode {
 	
-	promoCode mm = new promoCode (mainsettingsPage.ldriver);
+	promoCode mm = new promoCode (Home.ldriver);
 
 	@When("Click on Promo Code Tab")
 	public void click_on_promo_code_tab() {
