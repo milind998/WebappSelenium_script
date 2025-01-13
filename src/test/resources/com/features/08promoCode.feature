@@ -20,7 +20,7 @@
 Feature: Promo Code Tab
   @tag1
   Scenario: Click on Promo Code tab from settings
-  Given Admin Home page
+  #Given Admin Home page
   When Click on Setting page
   And Click on Promo Code Tab
   Then Check Promo Code tab text
