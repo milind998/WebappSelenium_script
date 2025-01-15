@@ -120,9 +120,10 @@ public class promoCode extends mainsettingsPage {
 	}
 
 
-	public void Select_Promo_Offer_TypeComboBox() {
+	public void Select_Promo_Offer_TypeComboBox() throws InterruptedException {
 		WebElement PromoOffer_Type = ldriver.findElement(By.xpath("(//*[@class=\"MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-qiwgdb\"])[2]"));
 		PromoOffer_Type.click();
+		
 	}
 
 	
@@ -248,7 +249,8 @@ public class promoCode extends mainsettingsPage {
 	@FindBy(xpath="//*[text()='price discount']")
 	@CacheLookup
 	WebElement Price_Discount;
-	public void Select_Price_Discount_PromoOffer_Type() {
+	public void Select_Price_Discount_PromoOffer_Type() throws InterruptedException {
+		Thread.sleep(1500);
 		Price_Discount.click();
 	}
 	
