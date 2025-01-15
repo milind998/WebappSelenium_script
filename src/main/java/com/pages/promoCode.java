@@ -258,7 +258,8 @@ public class promoCode extends mainsettingsPage {
 	@FindBy(xpath="//*[text()='Multi use promo codes']")
 	@CacheLookup
 	WebElement MultiUse_PromoCodes_Type;
-	public void Select_MultiUse_PromoCodes_Type() {
+	public void Select_MultiUse_PromoCodes_Type() throws InterruptedException {
+		Thread.sleep(500);
 		MultiUse_PromoCodes_Type.click();
 	}
 	
@@ -274,7 +275,7 @@ public class promoCode extends mainsettingsPage {
 	@CacheLookup
 	WebElement Wallet_Recharge_Coupon;
 	public void Select_Wallet_Recharge_Coupon() throws InterruptedException {
-		Thread.sleep(1500);
+		Thread.sleep(1000);
 		Wallet_Recharge_Coupon.click();
 	}
 	

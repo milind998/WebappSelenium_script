@@ -375,7 +375,7 @@ public class stepsPromoCode {
 	  
 		mm.PromoLabelTextBox(PromoLabelBox);
 	    mm.Click_PromoCode_TypeComboBox();
-	    mm.Select_Wallet_Recharge_Coupon();
+	    mm.Select_MultiUse_PromoCodes_Type();
 	    mm.Select_Promo_Offer_TypeComboBox();
 	    mm.Select_Price_Discount_PromoOffer_Type();
 	    mm.Minimum_order_PriceTextBox(Minimum_order_PriceBox);
