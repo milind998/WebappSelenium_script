@@ -273,7 +273,8 @@ public class promoCode extends mainsettingsPage {
 	@FindBy(xpath="//*[text()='Wallet Recharge Coupon']")
 	@CacheLookup
 	WebElement Wallet_Recharge_Coupon;
-	public void Select_Wallet_Recharge_Coupon() {
+	public void Select_Wallet_Recharge_Coupon() throws InterruptedException {
+		Thread.sleep(1500);
 		Wallet_Recharge_Coupon.click();
 	}
 	
