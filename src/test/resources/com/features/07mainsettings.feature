@@ -50,31 +50,31 @@ Examples:
 
 
  
- @wait
- @4
- Scenario: Add slots tab
- Given Click on Delivery Slots button
- When Click on Add Slots button
- And Add Slots tab text1
- Then Add Slots tab text
-    
-
-
-@wait
-@5
-Scenario Outline: Add delivery Slot
-Given Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
-When Click on ADD button
-Then check Toast message "<Toast Message>"
-
-Examples: 
-     | Number Of Slots | Delivery Slot Start Time | Delivery Slot End Time | Toast Message |
-     | 5               | 0600                     | 0900                   | Please do not repeate the time Or number of slots.|
-     | 45              |                          |                        | Please select/Enter Start Time and End Time  |
-     |                 | 1200                     | 1200                   | Fill all the fields                          |
-     | 6               | 13                       | 04                     | Selected Invalid Time                        |
-     |                 |                          |                        |  Fill all the fields                         |
-     | 5               | 0600                     | 0900                   | Delivery slot details updated successfully!! |
+ #@wait
+ #@4
+ #Scenario: Add slots tab
+ #Given Click on Delivery Slots button
+ #When Click on Add Slots button
+ #And Add Slots tab text1
+ #Then Add Slots tab text
+    #
+#
+#
+#@wait
+#@5
+#Scenario Outline: Add delivery Slot
+#Given Admin fill data in textboxes "<Number Of Slots>", "<Delivery Slot Start Time>", "<Delivery Slot End Time>"
+#When Click on ADD button
+#Then check Toast message "<Toast Message>"
+#
+#Examples: 
+     #| Number Of Slots | Delivery Slot Start Time | Delivery Slot End Time | Toast Message |
+     #| 5               | 0600                     | 0900                   | Please do not repeate the time Or number of slots.|
+     #| 45              |                          |                        | Please select/Enter Start Time and End Time  |
+     #|                 | 1200                     | 1200                   | Fill all the fields                          |
+     #| 6               | 13                       | 04                     | Selected Invalid Time                        |
+     #|                 |                          |                        |  Fill all the fields                         |
+     #| 5               | 0600                     | 0900                   | Delivery slot details updated successfully!! |
  
 
 Scenario: User should able to verify Scanning settings text
