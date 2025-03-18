@@ -242,6 +242,7 @@ Examples:
           |1050PM     | 1130PM   | Updates settings successfully! |
           |1222AM     | 3434PM   | Invalid Input        |
           |0900PM     | 1100PM   | Updates settings successfully! |
+          
 @wait
 Scenario: Check Clock and select time
 Given Click on Clock and select time
